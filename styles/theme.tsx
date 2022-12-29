@@ -1,3 +1,5 @@
+import { DefaultTheme } from "styled-components";
+
 const size = {
   mobile: "600px",
   tablet: "900px",
@@ -5,12 +7,14 @@ const size = {
   desktop: "1800px",
 };
 
-const theme = {
-  mainColor: "#0a4297",
-  mobile: `(max-width: ${size.mobile})`,
-  tablet: `(max-width: ${size.tablet})`,
-  laptop: `(max-width: ${size.laptop})`,
-  desktop: `(min-width: ${size.desktop})`,
+export const theme: DefaultTheme = {
+  color: {
+    background: "#F1F1F1",
+  },
+  size: {
+    mobile: `(max-width: ${size.mobile})`,
+    tablet: `(max-width: ${size.tablet})`,
+    laptop: `(max-width: ${size.laptop})`,
+    desktop: `(min-width: ${size.desktop})`,
+  },
 };
-
-export default theme;
