@@ -7,7 +7,9 @@ export const Root = styled.div`
   width: 100%;
 `;
 
-export const Text = styled.h1`
-  opacity: ${({ animate }: { animate: number }) => (animate > 0 ? 1 : 0)};
-  transition: .3s
+export const Img = styled.div`
+  text-align: center;
+  img {
+    border-radius: 20px;
+  }
 `;
