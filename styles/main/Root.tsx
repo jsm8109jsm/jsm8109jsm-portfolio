@@ -6,7 +6,7 @@ export const Root = styled.div`
   /* min-height: 100vh; */
   width: 100%;
   padding-top: 70px;
-  div {
+  section {
     padding: 0 100px;
     &:nth-child(n) {
       background-color: #181d31;
