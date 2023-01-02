@@ -16,4 +16,7 @@ export const Logo = styled.h1`
   color: ${({ theme }) => theme.color.teal};
   margin: 0;
   cursor: pointer;
+  &:hover {
+    animation: ${({ theme }) => theme.animation.tada} 1s linear;
+  }
 `;

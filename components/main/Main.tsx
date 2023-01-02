@@ -20,7 +20,7 @@ function Main() {
     pauseOnHover: true,
   };
   return (
-    <S.Main>
+    <S.Main id="main">
       <S.IntroDiv>
         <Fade cascade damping={0.5} triggerOnce>
           <S.Intro>안녕하세요!👋</S.Intro>
