@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    font-family: 'NanumSquare', sans-serif;
   }
 
   button{

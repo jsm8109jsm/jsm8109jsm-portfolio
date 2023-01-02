@@ -1,21 +1,26 @@
 import styled from "styled-components";
 
-export const Header = styled.header`
+export const Header = styled.header<{ isScroll: boolean }>`
   width: 100%;
   height: 70px;
   position: fixed;
-  background-color: ${({ theme }) => theme.color.beige};
+  background-color: ${({ isScroll, theme }) =>
+    isScroll ? theme.color.teal : theme.color.beige};
   padding: 0 100px;
-  display: fl;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
+  transition: 0.4s;
 `;
 
-export const Logo = styled.h1`
+export const Logo = styled.h1<{ isScroll: boolean }>`
   font-family: "Lemon", cursive;
-  color: ${({ theme }) => theme.color.teal};
+  color: ${({ isScroll, theme }) =>
+    isScroll ? theme.color.beige : theme.color.teal};
   margin: 0;
   cursor: pointer;
+  transition: 0.4s;
   &:hover {
     animation: ${({ theme }) => theme.animation.tada} 1s linear;
   }
