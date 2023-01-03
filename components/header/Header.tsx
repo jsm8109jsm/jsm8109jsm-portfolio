@@ -10,6 +10,11 @@ function Header() {
       <Link to="main" spy smooth offset={-70} duration={500}>
         <S.Logo isScroll={isScroll}>JSM</S.Logo>
       </Link>
+      <S.LinkList>
+        <Link to="about" spy smooth offset={-70} duration={500}>
+          <S.LinkMenu isScroll={isScroll}>ABOUT ME</S.LinkMenu>
+        </Link>
+      </S.LinkList>
     </S.Header>
   );
 }

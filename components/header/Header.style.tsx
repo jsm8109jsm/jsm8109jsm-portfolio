@@ -25,3 +25,21 @@ export const Logo = styled.h1<{ isScroll: boolean }>`
     animation: ${({ theme }) => theme.animation.tada} 1s linear;
   }
 `;
+
+export const LinkList = styled.ul`
+  list-style: none;
+  display: flex;
+  gap: 20px;
+`;
+
+export const LinkMenu = styled.li<{ isScroll: boolean }>`
+  font-family: "Lemon", cursive;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.4s;
+  color: ${({ isScroll, theme }) =>
+    isScroll ? theme.color.beige : theme.color.teal};
+  &:hover {
+    animation: ${({ theme }) => theme.animation.tada} 1s linear;
+  }
+`;
