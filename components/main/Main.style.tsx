@@ -1,5 +1,4 @@
 import styled, { DefaultTheme } from "styled-components";
-import { Theme } from "../../types/theme";
 import Slider from "react-slick";
 
 export const Main = styled.section`
@@ -13,21 +12,21 @@ export const IntroDiv = styled.div`
   flex-direction: column;
 `;
 
-export const Intro = styled.span<{ adj?: true }>`
+export const Intro = styled.div<{ adj?: true }>`
   color: ${({ adj, theme }) =>
     adj ? theme.color.teal : theme.color.lightBeige};
   font-weight: bold;
   font-size: 64px;
-  display: inline-block;
+  display: block;
 `;
 
 export const StyledSlider = styled(Slider)`
   .slick-list {
     max-width: calc(100vw - 200px);
-    width: 100%;
+    /* width: 100%; */
     overflow: hidden;
   }
-  .slick-slide:not(.slick-active) {
+  /* .slick-slide:not(.slick-active) {
     visibility: hidden;
-  }
+  } */
 `;
