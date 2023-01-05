@@ -33,7 +33,7 @@ export const LinkList = styled.ul`
 `;
 
 export const LinkMenu = styled.li<{ isScroll: boolean }>`
-  font-family: "Lemon", cursive;
+  font-family: "Black Han Sans", sans-serif;
   font-size: 1.2em;
   cursor: pointer;
   transition: 0.4s;
@@ -43,3 +43,4 @@ export const LinkMenu = styled.li<{ isScroll: boolean }>`
     animation: ${({ theme }) => theme.animation.tada} 1s linear;
   }
 `;
+  
