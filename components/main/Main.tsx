@@ -29,7 +29,7 @@ function Main() {
             {data.map((item) => {
               return (
                 <S.Intro adj key={item}>
-                  {`/* ${item} */`}
+                  {`/** ${item} */`}
                 </S.Intro>
               );
             })}

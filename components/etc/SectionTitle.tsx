@@ -1,8 +1,18 @@
 import React from "react";
-import { Title } from "./SectionTitle.style";
+import * as S from "./SectionTitle.style";
 
-function SectionTitle({ children }: { children: string }) {
-  return <Title>{children}</Title>;
+function SectionTitle({
+  children,
+  isBlack,
+}: {
+  children: string;
+  isBlack: boolean;
+}) {
+  return (
+    <S.Center>
+      <S.Title isBlack={isBlack}>{children}</S.Title>
+    </S.Center>
+  );
 }
 
 export default SectionTitle;
