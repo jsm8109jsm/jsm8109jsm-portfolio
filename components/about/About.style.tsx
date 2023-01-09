@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
+export const About = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+`;
+
 export const Info = styled.div`
-  margin-top: 60px;
-  margin-bottom: 60px;
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -28,3 +32,9 @@ export const Strengths = styled.div`
   justify-items: center;
   gap: 60px;
 `;
+
+export const Careers = styled.div`
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+`

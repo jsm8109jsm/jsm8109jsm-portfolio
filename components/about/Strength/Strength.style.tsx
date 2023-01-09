@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Strength = styled.div`
   width: 500px;
-  
 `;
 
 export const Title = styled.h1`

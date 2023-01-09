@@ -5,10 +5,11 @@ import * as S from "./About.style";
 import { Badge, Phone, SchoolOutlined, Email } from "@mui/icons-material";
 import Strength from "./Strength/Strength";
 import Lorem from "../etc/Lorem";
+import Career from "./Career/Career";
 
 function About() {
   return (
-    <section id="about">
+    <S.About id="about">
       <SectionTitle isBlack>ABOUT ME</SectionTitle>
       <S.Info>
         <Image
@@ -50,7 +51,11 @@ function About() {
           <Lorem />
         </Strength>
       </S.Strengths>
-    </section>
+      <S.Careers>
+        <Career title={"CERTIFICATES"}></Career>
+        <Career title={"PRIZES"}></Career>
+      </S.Careers>
+    </S.About>
   );
 }
 
