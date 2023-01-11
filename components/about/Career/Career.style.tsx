@@ -19,6 +19,7 @@ export const Contents = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin: 30px 0;
 `;
 
 export const Content = styled.span<{ isCertificate?: true }>`

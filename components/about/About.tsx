@@ -7,6 +7,8 @@ import Strength from "./Strength/Strength";
 import Lorem from "../etc/Lorem";
 import Career from "./Career/Career";
 
+import data from "./Career/career.json";
+
 function About() {
   return (
     <S.About id="about">
@@ -52,8 +54,8 @@ function About() {
         </Strength>
       </S.Strengths>
       <S.Careers>
-        <Career title={"CERTIFICATES"}></Career>
-        <Career title={"PRIZES"}></Career>
+        <Career title={"CERTIFICATES"} data={data.certificates} isCertificate></Career>
+        <Career title={"PRIZES"} data={data.prizes}></Career>
       </S.Careers>
     </S.About>
   );
