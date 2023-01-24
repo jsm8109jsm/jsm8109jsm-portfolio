@@ -6,12 +6,13 @@ import { Badge, Phone, SchoolOutlined, Email } from "@mui/icons-material";
 import Strength from "./Strength/Strength";
 import Lorem from "../etc/Lorem";
 import Career from "./Career/Career";
+import * as A from "../../styles/All";
 
 import data from "./Career/career.json";
 
 function About() {
   return (
-    <S.About id="about">
+    <A.Section id="about">
       <SectionTitle isBlack>ABOUT ME</SectionTitle>
       <S.Info>
         <Image
@@ -54,10 +55,14 @@ function About() {
         </Strength>
       </S.Strengths>
       <S.Careers>
-        <Career title={"CERTIFICATES"} data={data.certificates} isCertificate></Career>
+        <Career
+          title={"CERTIFICATES"}
+          data={data.certificates}
+          isCertificate
+        ></Career>
         <Career title={"PRIZES"} data={data.prizes}></Career>
       </S.Careers>
-    </S.About>
+    </A.Section>
   );
 }
 

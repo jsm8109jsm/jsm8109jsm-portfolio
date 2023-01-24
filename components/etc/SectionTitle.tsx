@@ -6,7 +6,7 @@ function SectionTitle({
   isBlack,
 }: {
   children: string;
-  isBlack: boolean;
+  isBlack?: true;
 }) {
   return (
     <S.Center>
