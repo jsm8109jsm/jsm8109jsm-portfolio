@@ -8,25 +8,28 @@ interface SkillIconProps {
   height: number;
   filename: string;
   level: number;
+  comments: string[];
 }
 
-function SkillIcon({ name, width, height, filename, level }: SkillIconProps) {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
+function SkillIcon({
+  name,
+  width,
+  height,
+  filename,
+  level,
+  comments,
+}: SkillIconProps) {
   return (
     <>
       <S.IconTooltip
         title={
           <>
             <SkillTypesTitle>{name}</SkillTypesTitle>
+            <S.SkillComments>
+              {comments.map((item, index) => {
+                return <S.SkillComment key={index}>{item}</S.SkillComment>;
+              })}
+            </S.SkillComments>
             <S.LevelTitle>LEVEL</S.LevelTitle>
             <S.SkillLevels>
               {[...Array.from({ length: level }, (v, i) => i)].map(
@@ -42,9 +45,6 @@ function SkillIcon({ name, width, height, filename, level }: SkillIconProps) {
         }
         arrow
         placement="right"
-        open={open}
-        onClose={handleClose}
-        onOpen={handleOpen}
       >
         <S.Icon
           alt={name}

@@ -17,7 +17,7 @@ export const IconTooltip = styled(({ className, ...props }: TooltipProps) => (
     backgroundColor: theme.color.black,
     color: "white",
     padding: "15px",
-    minWidth: "232px",
+    minWidth: "270px",
     borderRadius: "10px",
   },
   [`& .${tooltipClasses.arrow}`]: {
@@ -32,8 +32,19 @@ export const SkillLevels = styled.div`
 `;
 
 export const SkillComments = styled.ul`
-  
-`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 15px 0;
+  padding: 0;
+  padding-left: 10px;
+  list-style-type: "✔";
+  width: 270px;
+`;
+
+export const SkillComment = styled.li`
+  padding-left: 5px;
+`;
 
 export const SkillLevel = styled.div<{ index: number }>`
   display: inline-block;
