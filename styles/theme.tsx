@@ -21,6 +21,7 @@ export const theme: DefaultTheme = {
     teal: "#678983",
     beige: "#E6DDC4",
     lightBeige: "#F0E9D2",
+    orange: "#FC6B3F",
   },
   size: {
     mobile: `(max-width: ${size.mobile})`,
