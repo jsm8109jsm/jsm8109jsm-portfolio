@@ -6,7 +6,7 @@ import SkillTypesTitle from "./SkillTypesTitle/SkillTypesTitle";
 import data from "./SkillComments.json";
 
 function Languages() {
-  const { c } = data.skills.languages;
+  const { c, cpp, html, css, js, ts, python } = data.skills.languages;
   return (
     <S.SkillTypes>
       <SkillTypesTitle>Languages</SkillTypesTitle>
@@ -25,7 +25,7 @@ function Languages() {
           level={2}
           width={120}
           height={120}
-          comments={c}
+          comments={cpp}
         />
       </S.SmallIconsWrapper>
       <S.SmallIconsWrapper>
@@ -34,22 +34,22 @@ function Languages() {
           filename="html"
           level={5}
           height={130}
-          comments={c}
+          comments={html}
         />
         <SkillIcon
           name="CSS3"
           filename="css"
           level={4}
           height={130}
-          comments={c}
+          comments={css}
         />
       </S.SmallIconsWrapper>
       <S.SmallIconsWrapper>
-        <SkillIcon name="JavaScript" filename="js" level={4} comments={c} />
-        <SkillIcon name="TypeScript" filename="ts" level={4} comments={c} />
+        <SkillIcon name="JavaScript" filename="js" level={4} comments={js} />
+        <SkillIcon name="TypeScript" filename="ts" level={4} comments={ts} />
       </S.SmallIconsWrapper>
       <S.IconWrapper>
-        <SkillIcon name="python" filename="python" level={2} comments={c} />
+        <SkillIcon name="python" filename="python" level={2} comments={python} />
       </S.IconWrapper>
     </S.SkillTypes>
   );
