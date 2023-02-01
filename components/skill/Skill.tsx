@@ -15,13 +15,13 @@ function Skill() {
           <Languages />
         </S.SkillLine>
         <S.SkillLine>
-          <Languages />
+          {/* <Languages /> */}
         </S.SkillLine>
         <S.SkillLine>
-          <Languages />
+          {/* <Languages /> */}
         </S.SkillLine>
         <S.SkillLine>
-          <Languages />
+          {/* <Languages /> */}
         </S.SkillLine>
       </S.Skills>
     </A.Section>

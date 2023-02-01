@@ -34,7 +34,6 @@ function SkillIcon({
             <S.SkillLevels>
               {[...Array.from({ length: level }, (v, i) => i)].map(
                 (index: number) => {
-                  console.log(index);
                   return (
                     <S.SkillLevel key={index} index={index}></S.SkillLevel>
                   );
