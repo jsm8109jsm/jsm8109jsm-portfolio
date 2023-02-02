@@ -12,16 +12,16 @@ function Languages() {
 
   const skillRef = collection(fireStore, "skill");
 
-  useEffect(() => {
-    // 비동기로 데이터 받을준비
-    const getUsers = async () => {
-      // getDocs로 컬렉션안에 데이터 가져오기
-      const data = await getDocs(skillRef);
-      console.log(data);
-    };
+  // useEffect(() => {
+  //   // 비동기로 데이터 받을준비
+  //   const getUsers = async () => {
+  //     // getDocs로 컬렉션안에 데이터 가져오기
+  //     const data = await getDocs(skillRef);
+  //     console.log(data);
+  //   };
 
-    getUsers();
-  }, []);
+  //   getUsers();
+  // }, []);
 
   return (
     <S.SkillTypes>

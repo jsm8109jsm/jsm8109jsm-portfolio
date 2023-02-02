@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SkillTypesTitle = styled.h1`
-  font-size: 24px;
+  font-size: 22px;
   margin: 0;
   color: #fc6b3f;
   font-weight: 900;

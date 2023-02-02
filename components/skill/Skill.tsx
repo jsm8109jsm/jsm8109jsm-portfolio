@@ -5,6 +5,12 @@ import Image from "next/image";
 import SectionTitle from "../etc/SectionTitle";
 import * as A from "../../styles/All";
 import Languages from "./SkillTypes/Languages";
+import Ajax from "./SkillTypes/Ajax";
+import Tools from "./SkillTypes/Tools";
+import Framework from "./SkillTypes/Framework";
+import Design from "./SkillTypes/Design";
+import State from "./SkillTypes/State";
+import Deployment from "./SkillTypes/Deployment";
 
 function Skill() {
   return (
@@ -13,15 +19,18 @@ function Skill() {
       <S.Skills>
         <S.SkillLine>
           <Languages />
+          <Ajax />
         </S.SkillLine>
         <S.SkillLine>
-          {/* <Languages /> */}
+          <Tools />
         </S.SkillLine>
         <S.SkillLine>
-          {/* <Languages /> */}
+          <Framework />
+          <Design />
         </S.SkillLine>
         <S.SkillLine>
-          {/* <Languages /> */}
+          <State />
+          <Deployment />
         </S.SkillLine>
       </S.Skills>
     </A.Section>
