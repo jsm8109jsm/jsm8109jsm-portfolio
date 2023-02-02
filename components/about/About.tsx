@@ -9,6 +9,7 @@ import Career from "./Career/Career";
 import * as A from "../../styles/All";
 
 import data from "./Career/career.json";
+import { Character1 } from "./Info";
 
 function About() {
   return (
@@ -41,8 +42,8 @@ function About() {
         </S.InfoItems>
       </S.Info>
       <S.Strengths>
-        <Strength title={"장점1"}>
-          <Lorem />
+        <Strength title={"유쾌!"}>
+          <Character1 />
         </Strength>
         <Strength title={"장점1"}>
           <Lorem />

@@ -31,4 +31,9 @@ export const Careers = styled.div`
   display: flex;
   gap: 20px;
   justify-content: center;
-`
+`;
+
+export const Stress = styled.span`
+  font-weight: 400;
+  background-color: rgba(103, 137, 131, 0.5);
+`;

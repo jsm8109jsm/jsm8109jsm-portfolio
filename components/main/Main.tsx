@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Fade } from "react-awesome-reveal";
-import Slider from "react-slick";
 import * as S from "./Main.style";
-import data from "./adj.json";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { collection, getDocs } from "firebase/firestore";
+import { fireStore } from "../../utils/Firebase";
 
 function Main() {
+  const [data, setData] = useState<string[]>([]);
   const settings = {
     arrows: false,
     dots: false,
@@ -20,6 +21,23 @@ function Main() {
     // pauseOnHover: true,
     initialSlide: Math.floor(Math.random() * data.length - 1),
   };
+  const bucket = collection(fireStore, "modifier");
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await getDocs(bucket);
+        const newData: string[] = [];
+        console.log(response);
+        response.docs.map((doc) => {
+          newData.push(doc.data().modifier);
+        });
+        setData(newData);
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, []);
   return (
     <S.Main id="main">
       <S.IntroDiv>
