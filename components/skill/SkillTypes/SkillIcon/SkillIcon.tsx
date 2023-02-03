@@ -1,4 +1,7 @@
+import { DocumentData } from "firebase/firestore";
 import React from "react";
+import { useRecoilState } from "recoil";
+import { LoadingState } from "../../../../utils/atom/loading";
 import SkillTypesTitle from "../SkillTypesTitle/SkillTypesTitle";
 import * as S from "./SkillIcon.style";
 
@@ -8,7 +11,7 @@ interface SkillIconProps {
   height: number;
   filename: string;
   level: number;
-  comments: string[];
+  comments: any;
 }
 
 function SkillIcon({
@@ -19,6 +22,7 @@ function SkillIcon({
   level,
   comments,
 }: SkillIconProps) {
+  const [loading, setLoading] = useRecoilState(LoadingState);
   return (
     <>
       <S.IconTooltip
@@ -26,9 +30,11 @@ function SkillIcon({
           <>
             <SkillTypesTitle>{name}</SkillTypesTitle>
             <S.SkillComments>
-              {comments.map((item, index) => {
-                return <S.SkillComment key={index}>{item}</S.SkillComment>;
-              })}
+              {!loading &&
+                comments.length > 0 &&
+                comments.map((item: string, index: number) => {
+                  return <S.SkillComment key={index}>{item}</S.SkillComment>;
+                })}
             </S.SkillComments>
             <S.LevelTitle>LEVEL</S.LevelTitle>
             <S.SkillLevels>

@@ -1,28 +1,13 @@
+import { DocumentData } from "firebase/firestore";
 import Image from "next/image";
 import React, { useEffect } from "react";
+import { SkillComments } from "../Skill";
 import SkillIcon from "./SkillIcon/SkillIcon";
 import * as S from "./SkillTypes.style";
 import SkillTypesTitle from "./SkillTypesTitle/SkillTypesTitle";
-import data from "./SkillComments.json";
-import { query, collection, getDocs } from "firebase/firestore";
-import { fireStore } from "../../../utils/Firebase";
-
-function Languages() {
-  const { c, cpp, html, css, js, ts, python } = data.skills.languages;
-
-  const skillRef = collection(fireStore, "skill");
-
-  // useEffect(() => {
-  //   // 비동기로 데이터 받을준비
-  //   const getUsers = async () => {
-  //     // getDocs로 컬렉션안에 데이터 가져오기
-  //     const data = await getDocs(skillRef);
-  //     console.log(data);
-  //   };
-
-  //   getUsers();
-  // }, []);
-
+function Languages({ data }: { data: DocumentData }) {
+  const { c, cpp, html, css, js, ts, python } = data;
+  console.log(data);
   return (
     <S.SkillTypes>
       <SkillTypesTitle>Languages</SkillTypesTitle>

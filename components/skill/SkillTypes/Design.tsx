@@ -1,9 +1,11 @@
+import { DocumentData } from "firebase/firestore";
 import React from "react";
+import { SkillComments } from "../Skill";
 import SkillIcon from "./SkillIcon/SkillIcon";
 import * as S from "./SkillTypes.style";
 import SkillTypesTitle from "./SkillTypesTitle/SkillTypesTitle";
 
-function Design() {
+function Design({ data }: { data: DocumentData }) {
   return (
     <S.SkillTypes>
       <SkillTypesTitle>Design Systems</SkillTypesTitle>
