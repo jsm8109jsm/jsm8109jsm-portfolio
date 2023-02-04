@@ -43,13 +43,13 @@ function Skill() {
         });
         console.log(newData.ajax);
         setSkillComments(newData);
+        setLoading(false);
       } catch (error) {
         console.log(error);
       }
     })();
-    setLoading(false);
   }, []);
-
+  
   return (
     <A.Section id="skill">
       <SectionTitle>SKILLS</SectionTitle>
@@ -57,9 +57,9 @@ function Skill() {
         <S.Skills>
           <S.SkillLine>
             <Languages data={skillComments?.languages} />
-            {/* <Ajax data={skillComments?.ajax} /> */}
+            <Ajax data={skillComments?.ajax} />
           </S.SkillLine>
-          {/* <S.SkillLine>
+          <S.SkillLine>
             <Tools data={skillComments?.tools} />
           </S.SkillLine>
           <S.SkillLine>
@@ -69,7 +69,7 @@ function Skill() {
           <S.SkillLine>
             <State data={skillComments.state} />
             <Deployment data={skillComments.deployment} />
-          </S.SkillLine> */}
+          </S.SkillLine>
         </S.Skills>
       )}
     </A.Section>
