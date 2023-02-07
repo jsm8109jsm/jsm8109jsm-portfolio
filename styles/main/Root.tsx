@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Root = styled.div`
   /* background-color: ${({ theme }) => theme.color.background}; */
-  height: 6000px;
+  /* height: 6000px; */
   /* min-height: 100vh; */
   width: 100%;
   padding-top: 70px;

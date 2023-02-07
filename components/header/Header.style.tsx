@@ -29,7 +29,7 @@ export const Logo = styled.h1<{ isScroll: boolean }>`
 export const LinkList = styled.ul`
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
 `;
 
 export const LinkMenu = styled.li<{ isScroll: boolean }>`

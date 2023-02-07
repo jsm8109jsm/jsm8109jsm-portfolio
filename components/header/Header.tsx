@@ -17,6 +17,9 @@ function Header() {
         <Link to="skill" spy smooth offset={-70} duration={500}>
           <S.LinkMenu isScroll={isScroll}>SKILLS</S.LinkMenu>
         </Link>
+        <Link to="project" spy smooth offset={-70} duration={500}>
+          <S.LinkMenu isScroll={isScroll}>PROJECTS</S.LinkMenu>
+        </Link>
       </S.LinkList>
     </S.Header>
   );

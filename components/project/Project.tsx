@@ -5,7 +5,7 @@ import SectionTitle from "../etc/SectionTitle";
 
 function Project() {
   return (
-    <A.Section>
+    <A.Section id="project">
       <SectionTitle isBlack>PROJECTS</SectionTitle>
     </A.Section>
   );
