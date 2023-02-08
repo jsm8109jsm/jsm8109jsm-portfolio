@@ -7,7 +7,6 @@ import * as S from "./SkillTypes.style";
 import SkillTypesTitle from "./SkillTypesTitle/SkillTypesTitle";
 function Languages({ data }: { data: DocumentData }) {
   const { c, cpp, html, css, js, ts, python } = data;
-  console.log(data);
   return (
     <S.SkillTypes>
       <SkillTypesTitle>Languages</SkillTypesTitle>

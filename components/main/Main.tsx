@@ -28,7 +28,6 @@ function Main() {
       try {
         const response = await getDocs(bucket);
         const newData: string[] = [];
-        console.log(response);
         response.docs.map((doc) => {
           newData.push(doc.data().modifier);
         });

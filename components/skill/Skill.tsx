@@ -41,7 +41,6 @@ function Skill() {
         response.docs.map((doc) => {
           newData[doc.id] = doc.data();
         });
-        console.log(newData.ajax);
         setSkillComments(newData);
         setLoading(false);
       } catch (error) {
