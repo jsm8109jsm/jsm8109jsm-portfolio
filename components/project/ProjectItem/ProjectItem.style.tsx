@@ -9,6 +9,7 @@ export const ProjectItem = styled.div`
   display: flex;
   flex-direction: column;
   gap: 25px;
+  cursor: pointer;
 `;
 
 export const ProjectImage = styled(Image)`

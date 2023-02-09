@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { RecoilRoot } from "recoil";
 
 import "../styles/fonts.css";
+import ProjectModal from "../components/project/ProjectModal/ProjectModal";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const queryClient = new QueryClient();
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <QueryClientProvider client={queryClient}>
             <Component {...pageProps} />
             <GlobalStyle />
+            <ProjectModal />
           </QueryClientProvider>
         </ThemeProvider>
       </RecoilRoot>
