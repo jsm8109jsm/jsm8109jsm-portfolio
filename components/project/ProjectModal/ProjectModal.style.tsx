@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { Modal, Box } from "@mui/material";
+import { Modal } from "@mui/material";
 
 export const StyledModal = styled(Modal)``;
 
-export const StyledBox = styled(Box)`
+export const StyledBox = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -17,4 +17,17 @@ export const StyledBox = styled(Box)`
   &:focus-visible {
     outline: none;
   }
+`;
+export const Title = styled.h1`
+  font-size: 48px;
+  text-align: center;
+  margin: 0;
+  font-weight: 900;
+`;
+
+export const Date = styled.h6`
+  color: #808080;
+  text-align: center;
+  margin: 0;
+  font-size: 24px;
 `;
