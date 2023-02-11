@@ -23,7 +23,6 @@ export const Intro = styled.div<{ adj?: true }>`
 export const StyledSlider = styled(Slider)`
   .slick-list {
     max-width: calc(100vw - 200px);
-    /* width: 100%; */
     overflow: hidden;
   }
   /* .slick-slide:not(.slick-active) {

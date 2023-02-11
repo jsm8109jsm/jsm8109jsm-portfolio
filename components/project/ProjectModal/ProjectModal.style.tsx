@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { Modal } from "@mui/material";
+import Slider from "react-slick";
+import Image from "next/image";
+import { Skeleton } from "@mui/material";
 
 export const StyledModal = styled(Modal)``;
 
@@ -18,6 +21,7 @@ export const StyledBox = styled.div`
     outline: none;
   }
 `;
+
 export const Title = styled.h1`
   font-size: 48px;
   text-align: center;
@@ -31,3 +35,20 @@ export const Date = styled.h6`
   margin: 0;
   font-size: 24px;
 `;
+export const StyledSlider = styled(Slider)`
+  .slick-list {
+    max-width: calc(100vw - 200px);
+    overflow: hidden;
+  }
+`;
+
+export const ProjectImg = styled(Image)`
+  height: auto !important;
+  position: relative !important;
+`;
+
+export const ImageSkeleton = styled(Skeleton)`
+  /* width: 100%;
+  height: auto !important; */
+  height: 212.85px;
+`

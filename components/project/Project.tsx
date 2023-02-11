@@ -6,6 +6,7 @@ import { collection, DocumentData, getDocs } from "firebase/firestore";
 import { fireStore, storage } from "../../utils/Firebase";
 import ProjectItem from "./ProjectItem/ProjectItem";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
+// import
 
 export interface Personal_Projects {
   [key: string]: DocumentData | string;
@@ -35,23 +36,12 @@ function Project() {
         listAll(imageListRef).then((response) => {
           response.items.map((item) => {
             getDownloadURL(item).then((url) => {
-              // const index = newData.findIndex((data) => {
-              //   console.log(item.name.slice(0, -4) === data.imageName);
-              //   item.name.slice(0, -4) === data.imageName;
-              // });
               newData = newData.map((data) => {
                 return data.imageName === item.name.slice(0, -4)
                   ? { ...data, url: url }
                   : data;
               });
               setProjects(newData);
-              // setProjects((prev) => [
-              //   ...prev,
-              //   {
-              //     name: item.fullPath,
-              //     url: url,
-              //   },
-              // ]);
             });
           });
         });
