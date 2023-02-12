@@ -56,16 +56,16 @@ function ProjectModal() {
           <>{`(${data.start_month} ~ ${data.finish_month})`}</>
         </S.Date>
         {imageList.length > 0 ? (
-          <S.StyledSlider {...settings}>
-            {imageList.map((image, index) => (
-              <S.ProjectImg
-                key={index}
-                src={image}
-                alt={String(data.name)}
-                fill
-              />
-            ))}
-          </S.StyledSlider>
+          <>
+            <S.StyledSlider {...settings}>
+              {imageList.map((image, index) => (
+                <div key={index}>
+                  <S.ProjectImg src={image} alt={String(data.name)} fill />
+                  <span>{`${index + 1} / ${imageList.length}`}</span>
+                </div>
+              ))}
+            </S.StyledSlider>
+          </>
         ) : (
           <S.ImageSkeleton variant="rectangular" />
         )}
