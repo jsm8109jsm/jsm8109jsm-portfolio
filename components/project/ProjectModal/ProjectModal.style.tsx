@@ -11,7 +11,8 @@ export const StyledBox = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
+  width: 780px;
+  height: 400px;  
   background-color: white;
   box-shadow: rgb(0 0 0 / 20%) 0px 11px 15px -7px,
     rgb(0 0 0 / 14%) 0px 24px 38px 3px, rgb(0 0 0 / 12%) 0px 9px 46px 8px;
@@ -37,10 +38,12 @@ export const Date = styled.h6`
 `;
 export const StyledSlider = styled(Slider)`
   .slick-list {
-    max-width: calc(100vw - 200px);
+    height: 100%;
+    /* max-width: 300px; */
+    /* max-height: 212.85px; */
     overflow: hidden;
   }
-  .slick-arrow{
+  .slick-arrow {
     color: black;
   }
 `;
@@ -51,10 +54,47 @@ export const ProjectImg = styled(Image)`
 `;
 
 export const ImageSkeleton = styled(Skeleton)`
-  height: 212.85px;
-`
+  width: 340px;
+`;
 
 export const Index = styled.span`
   text-align: center;
   display: block;
+`;
+
+export const ItemsContainer = styled.div`
+  /* max-height: 212.85px; */
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  margin-top: 20px;
+`
+export const SliderContainer = styled.div`
+  max-height: 212.85px;
+  width: 340px;
+`
+
+export const Item = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-height: 240px;
+  overflow-y: scroll;
+`;
+
+export const Intro = styled.h3`
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+`
+
+export const ItemTitle = styled.h4`
+  font-size: 20px;
+  display: flex;
+  gap: 10px;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 10px;
 `
