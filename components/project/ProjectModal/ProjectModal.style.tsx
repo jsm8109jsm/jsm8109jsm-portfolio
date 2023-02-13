@@ -40,6 +40,9 @@ export const StyledSlider = styled(Slider)`
     max-width: calc(100vw - 200px);
     overflow: hidden;
   }
+  .slick-arrow{
+    color: black;
+  }
 `;
 
 export const ProjectImg = styled(Image)`
@@ -48,7 +51,10 @@ export const ProjectImg = styled(Image)`
 `;
 
 export const ImageSkeleton = styled(Skeleton)`
-  /* width: 100%;
-  height: auto !important; */
   height: 212.85px;
+`
+
+export const Index = styled.span`
+  text-align: center;
+  display: block;
 `

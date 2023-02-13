@@ -1,22 +1,32 @@
 import { getDownloadURL, listAll, ref } from "firebase/storage";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
 import { modalState } from "../../../utils/atom/modal";
 import { storage } from "../../../utils/Firebase";
 import * as S from "./ProjectModal.style";
+import { ChevronLeft, ChevronRight } from "@mui/icons-material";
+
 function ProjectModal() {
   const [modal, setModal] = useRecoilState(modalState);
+  const [imageIndex, setImageIndex] = useState(1);
+
   const [imageList, setImageList] = useState<string[]>([]);
 
   const { data, isOpen, value } = modal;
+  const beforeChange = (oldIndex: number, newIndex: number) => {
+    setImageIndex(newIndex + 1);
+  };
+
   const settings = {
-    arrows: false,
+    beforeChange: beforeChange,
+    arrows: true,
     dots: false,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 500,
+    prevArrow: <ChevronLeft />,
+    nextArrow: <ChevronRight />,
   };
   useEffect(() => {
     (async () => {
@@ -41,8 +51,6 @@ function ProjectModal() {
     })();
   }, [data.imageName, value]);
 
-  console.log(imageList);
-
   return (
     <S.StyledModal
       open={isOpen}
@@ -58,13 +66,18 @@ function ProjectModal() {
         {imageList.length > 0 ? (
           <>
             <S.StyledSlider {...settings}>
-              {imageList.map((image, index) => (
-                <div key={index}>
-                  <S.ProjectImg src={image} alt={String(data.name)} fill />
-                  <span>{`${index + 1} / ${imageList.length}`}</span>
-                </div>
-              ))}
+              {imageList.map((image, index) => {
+                return (
+                  <S.ProjectImg
+                    src={image}
+                    alt={String(data.name)}
+                    fill
+                    key={index}
+                  />
+                );
+              })}
             </S.StyledSlider>
+            <S.Index>{`${imageIndex} / ${imageList.length}`}</S.Index>
           </>
         ) : (
           <S.ImageSkeleton variant="rectangular" />
