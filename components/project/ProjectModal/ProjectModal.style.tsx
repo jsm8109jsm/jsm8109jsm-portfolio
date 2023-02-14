@@ -11,8 +11,8 @@ export const StyledBox = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 780px;
-  height: 400px;  
+  width: 800px;
+  /* height: 400px;   */
   background-color: white;
   box-shadow: rgb(0 0 0 / 20%) 0px 11px 15px -7px,
     rgb(0 0 0 / 14%) 0px 24px 38px 3px, rgb(0 0 0 / 12%) 0px 9px 46px 8px;
@@ -68,19 +68,31 @@ export const ItemsContainer = styled.div`
   gap: 40px;
   width: 100%;
   margin-top: 20px;
-`
+`;
 export const SliderContainer = styled.div`
   max-height: 212.85px;
-  width: 340px;
-`
+  width: 360px;
+`;
+
+export const Stacks = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+`;
+
+export const Stack = styled.div`
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid black;
+`;
 
 export const Item = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  max-height: 240px;
-  overflow-y: scroll;
 `;
 
 export const Intro = styled.h3`
@@ -88,7 +100,7 @@ export const Intro = styled.h3`
   margin: 0;
   margin-bottom: 10px;
   text-align: center;
-`
+`;
 
 export const ItemTitle = styled.h4`
   font-size: 20px;
@@ -97,4 +109,40 @@ export const ItemTitle = styled.h4`
   font-weight: normal;
   margin: 0;
   margin-bottom: 10px;
-`
+`;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-height: 240px;
+  overflow-y: scroll;
+`;
+
+export const Detail = styled.button`
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  background-color: black;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 127.02px;
+`;
+
+export const Link = styled.a`
+  &:link {
+    color: white;
+  }
+  &:visited {
+    color: white;
+  }
+  text-decoration-line: none;
+`;

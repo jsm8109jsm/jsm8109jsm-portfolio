@@ -7,6 +7,7 @@ import * as S from "./ProjectModal.style";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Layers, Mood, MoodBad } from "@mui/icons-material";
 import Lorem from "../../etc/Lorem";
+import { VscGithub } from "react-icons/vsc";
 
 function ProjectModal() {
   const [modal, setModal] = useRecoilState(modalState);
@@ -86,24 +87,46 @@ function ProjectModal() {
             <S.ImageSkeleton variant="rectangular" />
           )}
           <S.Item>
-            <S.Intro>
-              <>{data.intro}</>
-            </S.Intro>
-            <div>
-              <S.ItemTitle>
-                <Layers />
-                사용한 기술 스택
-              </S.ItemTitle>
-              <Lorem/>
-            </div>
-            <S.ItemTitle>
-              <Mood />
-              느낀 점
-            </S.ItemTitle>
-            <S.ItemTitle>
-              <MoodBad />
-              힘들었던 점
-            </S.ItemTitle>
+            <S.Content>
+              <S.Intro>
+                <>{data.intro}</>
+              </S.Intro>
+              <div>
+                <S.ItemTitle>
+                  <Layers />
+                  사용한 기술 스택
+                </S.ItemTitle>
+                <S.Stacks>
+                  {data.stacks.map((stack: string, index: number) => {
+                    return (
+                      <S.Stack key={index}>
+                        <>{stack}</>
+                      </S.Stack>
+                    );
+                  })}
+                </S.Stacks>
+              </div>
+              <div>
+                <S.ItemTitle>
+                  <Mood />
+                  느낀 점
+                </S.ItemTitle>
+                <>{data.feel}</>
+              </div>
+              <div>
+                <S.ItemTitle>
+                  <MoodBad />
+                  힘들었던 점
+                </S.ItemTitle>
+                <>{data.hard}</>
+              </div>
+            </S.Content>
+            <S.Link href={data.github_link} target="_blank">
+              <S.Detail>
+                <span>자세히 보기</span>
+                <VscGithub size={20} />
+              </S.Detail>
+            </S.Link>
           </S.Item>
         </S.ItemsContainer>
       </S.StyledBox>

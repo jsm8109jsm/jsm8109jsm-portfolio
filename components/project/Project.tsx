@@ -9,7 +9,7 @@ import { getDownloadURL, listAll, ref } from "firebase/storage";
 // import
 
 export interface Personal_Projects {
-  [key: string]: DocumentData | string;
+  [key: string]: any;
 }
 
 function Project() {

@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const Strength = styled.div`
-
-`;
+export const Strength = styled.div``;
 
 export const Title = styled.h1`
   margin: 10px auto;
