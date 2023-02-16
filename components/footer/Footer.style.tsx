@@ -21,6 +21,10 @@ export const Icons = styled.div`
 export const Copyright = styled.span``;
 
 export const Link = styled.a`
+  transition: 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
   &:link {
     color: white;
   }

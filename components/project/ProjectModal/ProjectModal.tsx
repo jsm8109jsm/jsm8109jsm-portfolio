@@ -19,7 +19,7 @@ function ProjectModal() {
   const beforeChange = (oldIndex: number, newIndex: number) => {
     setImageIndex(newIndex + 1);
   };
-
+        
   const settings = {
     beforeChange: beforeChange,
     arrows: true,
@@ -97,7 +97,7 @@ function ProjectModal() {
                   사용한 기술 스택
                 </S.ItemTitle>
                 <S.Stacks>
-                  {data.stacks.map((stack: string, index: number) => {
+                  {data.stacks && data.stacks.map((stack: string, index: number) => {
                     return (
                       <S.Stack key={index}>
                         <>{stack}</>

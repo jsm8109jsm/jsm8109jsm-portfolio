@@ -29,7 +29,7 @@ function Project() {
           newData.push(doc.data());
         });
 
-        const imageListRef = ref(
+         const imageListRef = ref(
           storage,
           `images/${value === 0 ? "personal" : "team"}`
         );
@@ -50,8 +50,6 @@ function Project() {
       }
     })();
   }, [value]);
-
-  console.log(projects);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);

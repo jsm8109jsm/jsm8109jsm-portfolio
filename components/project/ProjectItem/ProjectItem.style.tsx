@@ -15,7 +15,7 @@ export const ProjectItem = styled.div`
 export const ProjectImage = styled(Image)`
   height: auto !important;
   position: relative !important;
-`;
+`;    
 
 export const Title = styled.h1`
   font-size: 36px;
