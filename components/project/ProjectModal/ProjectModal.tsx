@@ -6,7 +6,6 @@ import { storage } from "../../../utils/Firebase";
 import * as S from "./ProjectModal.style";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Layers, Mood, MoodBad } from "@mui/icons-material";
-import Lorem from "../../etc/Lorem";
 import { VscGithub } from "react-icons/vsc";
 
 function ProjectModal() {
@@ -19,7 +18,7 @@ function ProjectModal() {
   const beforeChange = (oldIndex: number, newIndex: number) => {
     setImageIndex(newIndex + 1);
   };
-        
+
   const settings = {
     beforeChange: beforeChange,
     arrows: true,

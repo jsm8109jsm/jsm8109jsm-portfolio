@@ -22,6 +22,7 @@ export interface SkillComments {
 
 function Skill() {
   const skillRef = collection(fireStore, "skill");
+  const skillLevelRef = collection(fireStore, "skill_level");
   const [loading, setLoading] = useRecoilState(LoadingState);
   const [skillComments, setSkillComments] = useState<SkillComments>({
     languages: [],
@@ -32,6 +33,29 @@ function Skill() {
     state: [],
     deployment: [],
   });
+  const [skillLevel, setSkillLevel] = useState<SkillComments>({
+    languages_level: [],
+    ajax_level: [],
+    tools_level: [],
+    fw_level: [],
+    designs_level: [],
+    state_level: [],
+    deployment_level: [],
+  });
+
+  const { languages, ajax, tools, fw, designs, state, deployment } =
+    skillComments;
+
+  const {
+    languages_level,
+    ajax_level,
+    tools_level,
+    fw_level,
+    designs_level,
+    state_level,
+    deployment_level,
+  } = skillLevel;
+
   useEffect(() => {
     setLoading(true);
     (async () => {
@@ -42,32 +66,42 @@ function Skill() {
           newData[doc.id] = doc.data();
         });
         setSkillComments(newData);
+
+        const response2 = await getDocs(skillLevelRef);
+        const newData2 = skillLevel;
+        response2.docs.map((doc) => {
+          console.log(doc.data());
+
+          newData2[doc.id] = doc.data();
+        });
+        setSkillLevel(newData2);
+
         setLoading(false);
       } catch (error) {
         console.log(error);
       }
     })();
   }, []);
-  
+
   return (
     <A.Section id="skill">
       <SectionTitle>SKILLS</SectionTitle>
       {!loading && (
         <S.Skills>
           <S.SkillLine>
-            <Languages data={skillComments?.languages} />
-            <Ajax data={skillComments?.ajax} />
+            <Languages data={languages} levels={languages_level} />
+            <Ajax data={ajax} levels={ajax_level} />
           </S.SkillLine>
           <S.SkillLine>
-            <Tools data={skillComments?.tools} />
+            <Tools data={tools} levels={tools_level} />
           </S.SkillLine>
           <S.SkillLine>
-            <Framework data={skillComments?.fw} />
-            <Design data={skillComments?.design} />
+            <Framework data={fw} levels={fw_level} />
+            <Design data={designs} levels={designs_level} />
           </S.SkillLine>
           <S.SkillLine>
-            <State data={skillComments.state} />
-            <Deployment data={skillComments.deployment} />
+            <State data={state} levels={state_level} />
+            <Deployment data={deployment} levels={deployment_level} />
           </S.SkillLine>
         </S.Skills>
       )}

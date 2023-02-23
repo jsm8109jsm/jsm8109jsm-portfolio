@@ -5,7 +5,17 @@ import SkillIcon from "./SkillIcon/SkillIcon";
 import * as S from "./SkillTypes.style";
 import SkillTypesTitle from "./SkillTypesTitle/SkillTypesTitle";
 
-function Tools({ data }: { data: DocumentData }) {
+function Tools({ data, levels }: { data: DocumentData; levels: DocumentData }) {
+  const { git, github, vsc, gitkraken, figma, notion, slack } = data;
+  const {
+    git_level,
+    github_level,
+    vsc_level,
+    gitkraken_level,
+    figma_level,
+    notion_level,
+    slack_level,
+  } = levels;
   return (
     <S.SkillTypes>
       <SkillTypesTitle>Tools</SkillTypesTitle>
@@ -13,58 +23,58 @@ function Tools({ data }: { data: DocumentData }) {
         <SkillIcon
           name="git"
           filename="git"
-          level={2}
+          level={git_level}
           width={150}
           height={80}
-          comments={[""]}
+          comments={git}
         />
       </S.IconWrapper>
       <S.IconWrapper>
         <SkillIcon
           name="GitHub"
           filename="github"
-          level={2}
+          level={github_level}
           width={120}
           height={120}
-          comments={[""]}
+          comments={github}
         />
       </S.IconWrapper>
       <S.SmallIconsWrapper>
         <SkillIcon
           name="Visual Studio Code"
           filename="vsc"
-          level={2}
-          comments={[""]}
+          level={vsc_level}
+          comments={vsc}
         />
         <SkillIcon
           name="GitKraken"
           filename="gitkraken"
-          level={2}
-          comments={[""]}
+          level={gitkraken_level}
+          comments={gitkraken}
         />
       </S.SmallIconsWrapper>
       <S.SmallIconsWrapper>
         <SkillIcon
           name="Figma"
           filename="figma"
-          level={2}
-          comments={[""]}
+          level={figma_level}
+          comments={figma}
         />
         <SkillIcon
           name="Notion"
           filename="notion"
-          level={2}
-          comments={[""]}
+          level={notion_level}
+          comments={notion}
         />
       </S.SmallIconsWrapper>
       <S.IconWrapper>
         <SkillIcon
           name="slack"
           filename="slack"
-          level={2}
+          level={slack_level}
           width={150}
-          height={80}
-          comments={[""]}
+          // height={80}
+          comments={slack}
         />
       </S.IconWrapper>
     </S.SkillTypes>

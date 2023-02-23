@@ -5,7 +5,15 @@ import SkillIcon from "./SkillIcon/SkillIcon";
 import * as S from "./SkillTypes.style";
 import SkillTypesTitle from "./SkillTypesTitle/SkillTypesTitle";
 
-function Framework({ data }: { data: DocumentData }) {
+function Framework({
+  data,
+  levels,
+}: {
+  data: DocumentData;
+  levels: DocumentData;
+}) {
+  const { react, next } = data;
+  const { react_level, next_level } = levels;
   return (
     <S.SkillTypes>
       <SkillTypesTitle>Front-end F/w, Library</SkillTypesTitle>
@@ -13,16 +21,16 @@ function Framework({ data }: { data: DocumentData }) {
         <SkillIcon
           name="React.js"
           filename="react"
-          level={2}
-          comments={[""]}
+          level={react_level}
+          comments={react}
         />
       </S.IconWrapper>
       <S.IconWrapper>
         <SkillIcon
           name="Next.js"
           filename="next"
-          level={2}
-          comments={[""]}
+          level={next_level}
+          comments={next}
         />
       </S.IconWrapper>
     </S.SkillTypes>

@@ -5,7 +5,15 @@ import SkillIcon from "./SkillIcon/SkillIcon";
 import * as S from "./SkillTypes.style";
 import SkillTypesTitle from "./SkillTypesTitle/SkillTypesTitle";
 
-function State({ data }: { data: DocumentData }) {
+function State({
+  data,
+  levels,
+}: {
+  data: DocumentData;
+  levels: DocumentData;
+}) {
+  const {redux, recoil, reactquery} = data;
+  const {redux_level, recoil_level, reactquery_level} = levels;
   return (
     <S.SkillTypes>
       <SkillTypesTitle>State Management</SkillTypesTitle>
@@ -13,25 +21,25 @@ function State({ data }: { data: DocumentData }) {
         <SkillIcon
           name="Redux"
           filename="redux"
-          level={2}
-          comments={[""]}
+          level={redux_level}
+          comments={redux}
         />
       </S.IconWrapper>
       <S.IconWrapper>
         <SkillIcon
           name="Recoil"
           filename="recoil"
-          level={2}
+          level={recoil_level}
           height={150}
-          comments={[""]}
+          comments={recoil}
         />
       </S.IconWrapper>
       <S.IconWrapper>
         <SkillIcon
           name="React Query"
           filename="reactquery"
-          level={2}
-          comments={[""]}
+          level={reactquery_level}
+          comments={reactquery}
         />
       </S.IconWrapper>
     </S.SkillTypes>

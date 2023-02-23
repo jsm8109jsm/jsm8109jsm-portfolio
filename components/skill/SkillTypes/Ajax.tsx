@@ -5,8 +5,10 @@ import SkillIcon from "./SkillIcon/SkillIcon";
 import * as S from "./SkillTypes.style";
 import SkillTypesTitle from "./SkillTypesTitle/SkillTypesTitle";
 
-function Ajax({ data }: { data: DocumentData }) {
+function Ajax({ data, levels }: { data: DocumentData; levels: DocumentData }) {
   const { axios } = data;
+  const { axios_level } = levels;
+
   return (
     <S.SkillTypes>
       <SkillTypesTitle>Ajax</SkillTypesTitle>
@@ -14,7 +16,7 @@ function Ajax({ data }: { data: DocumentData }) {
         <SkillIcon
           name="Axios"
           filename="axios"
-          level={2}
+          level={axios_level}
           comments={axios}
           height={40}
         />

@@ -5,7 +5,22 @@ import SkillIcon from "./SkillIcon/SkillIcon";
 import * as S from "./SkillTypes.style";
 import SkillTypesTitle from "./SkillTypesTitle/SkillTypesTitle";
 
-function Design({ data }: { data: DocumentData }) {
+function Design({
+  data,
+  levels,
+}: {
+  data: DocumentData;
+  levels: DocumentData;
+}) {
+  const { sass, cssmodules, styledcomponents, mui, emotion } = data;
+  const {
+    sass_level,
+    cssmodules_level,
+    styledcomponents_level,
+    mui_level,
+    emotion_level,
+  } = levels;
+
   return (
     <S.SkillTypes>
       <SkillTypesTitle>Design Systems</SkillTypesTitle>
@@ -13,36 +28,36 @@ function Design({ data }: { data: DocumentData }) {
         <SkillIcon
           name="Sass"
           filename="sass"
-          level={2}
-          comments={[""]}
+          level={sass_level}
+          comments={sass}
         />
         <SkillIcon
           name="CSS MODULES"
           filename="cssmodules"
-          level={2}
-          comments={[""]}
+          level={cssmodules_level}
+          comments={cssmodules}
         />
       </S.SmallIconsWrapper>
       <S.SmallIconsWrapper>
         <SkillIcon
           name="Styled-Components"
           filename="styledcomponents"
-          level={2}
-          comments={[""]}
+          level={styledcomponents_level}
+          comments={styledcomponents}
         />
         <SkillIcon
           name="Material UI"
           filename="mui"
-          level={2}
-          comments={[""]}
+          level={mui_level}
+          comments={mui}
         />
       </S.SmallIconsWrapper>
       <S.IconWrapper>
         <SkillIcon
           name="Emotion.js"
           filename="emotion"
-          level={2}
-          comments={[""]}
+          level={emotion_level}
+          comments={emotion}
         />
       </S.IconWrapper>
     </S.SkillTypes>

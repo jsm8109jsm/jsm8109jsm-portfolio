@@ -20,7 +20,7 @@ export const IconWrapper = styled.div`
   position: relative;
   width: 100%;
   /* height: 100%; */
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
   }
 `;

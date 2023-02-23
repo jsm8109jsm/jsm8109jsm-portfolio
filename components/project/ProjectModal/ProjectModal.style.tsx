@@ -44,7 +44,7 @@ export const StyledSlider = styled(Slider)`
     overflow: hidden;
   }
   .slick-arrow {
-    color: black;
+    color: black !important;
   }
 `;
 
@@ -70,8 +70,7 @@ export const ItemsContainer = styled.div`
   margin-top: 20px;
 `;
 export const SliderContainer = styled.div`
-  max-height: 212.85px;
-  width: 360px;
+    width: 360px;
 `;
 
 export const Stacks = styled.div`
