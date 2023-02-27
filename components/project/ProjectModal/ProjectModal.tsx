@@ -74,7 +74,8 @@ function ProjectModal() {
                     <S.ProjectImg
                       src={image}
                       alt={String(data.name)}
-                      fill
+                      width={360}
+                      height={225.3}
                       key={index}
                     />
                   );
@@ -96,13 +97,14 @@ function ProjectModal() {
                   사용한 기술 스택
                 </S.ItemTitle>
                 <S.Stacks>
-                  {data.stacks && data.stacks.map((stack: string, index: number) => {
-                    return (
-                      <S.Stack key={index}>
-                        <>{stack}</>
-                      </S.Stack>
-                    );
-                  })}
+                  {data.stacks &&
+                    data.stacks.map((stack: string, index: number) => {
+                      return (
+                        <S.Stack key={index}>
+                          <>{stack}</>
+                        </S.Stack>
+                      );
+                    })}
                 </S.Stacks>
               </div>
               <div>

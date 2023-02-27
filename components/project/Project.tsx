@@ -6,6 +6,7 @@ import { collection, DocumentData, getDocs } from "firebase/firestore";
 import { fireStore, storage } from "../../utils/Firebase";
 import ProjectItem from "./ProjectItem/ProjectItem";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
+import { Fade } from "react-awesome-reveal";
 // import
 
 export interface Personal_Projects {
@@ -29,7 +30,7 @@ function Project() {
           newData.push(doc.data());
         });
 
-         const imageListRef = ref(
+        const imageListRef = ref(
           storage,
           `images/${value === 0 ? "personal" : "team"}`
         );
@@ -39,7 +40,9 @@ function Project() {
               newData = newData.map((data) => {
                 return data.imageName === item.name.slice(0, -4)
                   ? { ...data, url: url }
-                  : data;
+                  : data.url
+                  ? data
+                  : { ...data, url: "/" };
               });
               setProjects(newData);
             });
@@ -64,9 +67,11 @@ function Project() {
         </S.StyledTabs>
       </S.TabContainer>
       <S.ProjectsContainer>
-        {projects.map((item, index) => {
-          return <ProjectItem key={index} data={item}></ProjectItem>;
-        })}
+        <Fade cascade damping={0.25} triggerOnce>
+          {projects.map((item, index) => {
+            return <ProjectItem key={index} data={item}></ProjectItem>;
+          })}
+        </Fade>
       </S.ProjectsContainer>
     </A.Section>
   );

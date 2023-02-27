@@ -54,7 +54,8 @@ export const ProjectImg = styled(Image)`
 `;
 
 export const ImageSkeleton = styled(Skeleton)`
-  width: 340px;
+  width: 360px;
+  height: 225.3px;
 `;
 
 export const Index = styled.span`
@@ -70,7 +71,7 @@ export const ItemsContainer = styled.div`
   margin-top: 20px;
 `;
 export const SliderContainer = styled.div`
-    width: 360px;
+  width: 360px;
 `;
 
 export const Stacks = styled.div`
@@ -91,7 +92,7 @@ export const Item = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
+  /* width: 100%; */
 `;
 
 export const Intro = styled.h3`
@@ -114,7 +115,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
+  width: 340px;
   max-height: 240px;
   overflow-y: scroll;
 `;
