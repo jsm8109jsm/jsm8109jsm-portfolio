@@ -12,6 +12,10 @@ export const Title = styled.h1`
   color: white;
   font-family: "Black Han Sans", sans-serif;
   font-size: 48px;
+  transition: 300ms;
+  @media screen and (max-width: 1000px) {
+    font-size: 30px;
+  }
   text-align: center;
 `;
 

@@ -3,12 +3,13 @@ import React from "react";
 import { useRecoilState } from "recoil";
 import { modalState } from "../../../utils/atom/modal";
 import { Personal_Projects } from "../Project";
+import { Skeleton } from "@mui/material";
 import * as S from "./ProjectItem.style";
 
 function ProjectItem({ data }: { data: Personal_Projects }) {
   const [modal, setModal] = useRecoilState(modalState);
 
-  console.log(modal)
+  console.log(modal);
 
   return (
     <S.ProjectItem
@@ -22,11 +23,17 @@ function ProjectItem({ data }: { data: Personal_Projects }) {
         })
       }
     >
-      <S.ProjectImage
-        src={String(data.url)}
-        alt={`${data.name} 사진`}
-        fill
-      ></S.ProjectImage>
+      {data.url ? (
+        <S.ProjectImage src={String(data.url)} alt={`${data.name} 사진`} fill />
+      ) : (
+        <Skeleton>
+          <S.ProjectImage
+            src={String(data.url)}
+            alt={`${data.name} 사진`}
+            fill
+          />
+        </Skeleton>
+      )}
       <div>
         <S.Title>
           <>{data.name}</>
