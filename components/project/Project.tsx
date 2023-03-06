@@ -30,6 +30,11 @@ function Project() {
           newData.push(doc.data());
         });
 
+        if (response.docs.length === 0) {
+          setProjects([]);
+          return;
+        }
+
         const imageListRef = ref(
           storage,
           `images/${value === 0 ? "personal" : "team"}`
