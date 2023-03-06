@@ -7,10 +7,12 @@ import * as S from "./ProjectModal.style";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import { Layers, Mood, MoodBad } from "@mui/icons-material";
 import { VscGithub } from "react-icons/vsc";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 function ProjectModal() {
   const [modal, setModal] = useRecoilState(modalState);
   const [imageIndex, setImageIndex] = useState(1);
+  const matches = useMediaQuery("(min-width:800px)");
 
   const [imageList, setImageList] = useState<string[]>([]);
 
@@ -65,6 +67,11 @@ function ProjectModal() {
         <S.Date>
           <>{`(${data.start_month} ~ ${data.finish_month})`}</>
         </S.Date>
+        {!matches && (
+          <S.Intro>
+            <>{data.intro}</>
+          </S.Intro>
+        )}
         <S.ItemsContainer>
           {imageList.length > 0 ? (
             <S.SliderContainer>
@@ -88,9 +95,11 @@ function ProjectModal() {
           )}
           <S.Item>
             <S.Content>
-              <S.Intro>
-                <>{data.intro}</>
-              </S.Intro>
+              {matches && (
+                <S.Intro>
+                  <>{data.intro}</>
+                </S.Intro>
+              )}
               <div>
                 <S.ItemTitle>
                   <Layers />

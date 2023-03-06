@@ -111,6 +111,9 @@ export const Intro = styled.h3`
   margin: 0;
   margin-bottom: 10px;
   text-align: center;
+  @media screen and (max-width: 800px) {
+    margin: 20px auto;
+  }
 `;
 
 export const ItemTitle = styled.h4`
