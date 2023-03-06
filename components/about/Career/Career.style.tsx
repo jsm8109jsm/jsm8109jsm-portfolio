@@ -33,4 +33,10 @@ export const Content = styled.span<{ isCertificate?: true }>`
   }
   color: white;
   font-size: 24px;
+  @media screen and (max-width: 1000px) {
+    &:before {
+      margin-right: 10px;
+    }
+    font-size: 18px;
+  }
 `;
