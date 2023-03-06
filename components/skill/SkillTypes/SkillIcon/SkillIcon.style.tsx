@@ -2,12 +2,12 @@ import styled from "styled-components";
 import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import Image from "next/image";
 
-export const Icon = styled(Image)`
+export const Icon = styled(Image)<{ isFull?: true }>`
   &:hover {
     transform: scale(1.1);
   }
   transition: 0.3s;
-  width: 100%;
+  width: ${({ isFull }) => isFull && "100%"};
 `;
 
 export const IconTooltip = styled(({ className, ...props }: TooltipProps) => (

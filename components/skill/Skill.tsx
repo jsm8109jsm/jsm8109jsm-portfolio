@@ -66,16 +66,12 @@ function Skill() {
           newData[doc.id] = doc.data();
         });
         setSkillComments(newData);
-
         const response2 = await getDocs(skillLevelRef);
         const newData2 = skillLevel;
         response2.docs.map((doc) => {
-          console.log(doc.data());
-
           newData2[doc.id] = doc.data();
         });
         setSkillLevel(newData2);
-
         setLoading(false);
       } catch (error) {
         console.log(error);
@@ -90,10 +86,10 @@ function Skill() {
         <S.Skills>
           <S.SkillLine>
             <Languages data={languages} levels={languages_level} />
-            <Ajax data={ajax} levels={ajax_level} />
           </S.SkillLine>
           <S.SkillLine>
             <Tools data={tools} levels={tools_level} />
+            <Ajax data={ajax} levels={ajax_level} />
           </S.SkillLine>
           <S.SkillLine>
             <Framework data={fw} levels={fw_level} />

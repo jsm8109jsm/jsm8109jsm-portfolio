@@ -23,23 +23,22 @@ function State({
           filename="redux"
           level={redux_level}
           comments={redux}
+          isFull
         />
-      </S.IconWrapper>
-      <S.IconWrapper>
         <SkillIcon
           name="Recoil"
           filename="recoil"
           level={recoil_level}
           height={150}
           comments={recoil}
+          isFull
         />
-      </S.IconWrapper>
-      <S.IconWrapper>
         <SkillIcon
           name="React Query"
           filename="reactquery"
           level={reactquery_level}
           comments={reactquery}
+          isFull
         />
       </S.IconWrapper>
     </S.SkillTypes>

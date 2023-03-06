@@ -27,9 +27,8 @@ function Tools({ data, levels }: { data: DocumentData; levels: DocumentData }) {
           width={150}
           height={80}
           comments={git}
+          isFull
         />
-      </S.IconWrapper>
-      <S.IconWrapper>
         <SkillIcon
           name="GitHub"
           filename="github"
@@ -37,9 +36,8 @@ function Tools({ data, levels }: { data: DocumentData; levels: DocumentData }) {
           width={120}
           height={120}
           comments={github}
+          isFull
         />
-      </S.IconWrapper>
-      <S.SmallIconsWrapper>
         <SkillIcon
           name="Visual Studio Code"
           filename="vsc"
@@ -52,8 +50,6 @@ function Tools({ data, levels }: { data: DocumentData; levels: DocumentData }) {
           level={gitkraken_level}
           comments={gitkraken}
         />
-      </S.SmallIconsWrapper>
-      <S.SmallIconsWrapper>
         <SkillIcon
           name="Figma"
           filename="figma"
@@ -66,8 +62,6 @@ function Tools({ data, levels }: { data: DocumentData; levels: DocumentData }) {
           level={notion_level}
           comments={notion}
         />
-      </S.SmallIconsWrapper>
-      <S.IconWrapper>
         <SkillIcon
           name="slack"
           filename="slack"
@@ -75,6 +69,7 @@ function Tools({ data, levels }: { data: DocumentData; levels: DocumentData }) {
           width={150}
           // height={80}
           comments={slack}
+          isFull
         />
       </S.IconWrapper>
     </S.SkillTypes>

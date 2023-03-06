@@ -24,7 +24,7 @@ function Design({
   return (
     <S.SkillTypes>
       <SkillTypesTitle>Design Systems</SkillTypesTitle>
-      <S.SmallIconsWrapper>
+      <S.IconWrapper>
         <SkillIcon
           name="Sass"
           filename="sass"
@@ -37,8 +37,6 @@ function Design({
           level={cssmodules_level}
           comments={cssmodules}
         />
-      </S.SmallIconsWrapper>
-      <S.SmallIconsWrapper>
         <SkillIcon
           name="Styled-Components"
           filename="styledcomponents"
@@ -51,13 +49,12 @@ function Design({
           level={mui_level}
           comments={mui}
         />
-      </S.SmallIconsWrapper>
-      <S.IconWrapper>
         <SkillIcon
           name="Emotion.js"
           filename="emotion"
           level={emotion_level}
           comments={emotion}
+          isFull
         />
       </S.IconWrapper>
     </S.SkillTypes>

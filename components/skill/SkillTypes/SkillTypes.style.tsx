@@ -8,13 +8,6 @@ export const SkillTypes = styled.div`
   padding: 30px;
 `;
 
-export const Icon = styled(Image)`
-  &:hover {
-    transform: scale(1.1);
-  }
-  width: 100%;
-`;
-
 export const IconWrapper = styled.div`
   margin: 20px auto;
   position: relative;
@@ -23,10 +16,14 @@ export const IconWrapper = styled.div`
   &:last-child {
     margin-bottom: 0;
   }
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const SmallIconsWrapper = styled(IconWrapper)`
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 20px; */
 `;

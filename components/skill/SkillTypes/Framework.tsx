@@ -23,14 +23,14 @@ function Framework({
           filename="react"
           level={react_level}
           comments={react}
+          isFull
         />
-      </S.IconWrapper>
-      <S.IconWrapper>
         <SkillIcon
           name="Next.js"
           filename="next"
           level={next_level}
           comments={next}
+          isFull
         />
       </S.IconWrapper>
     </S.SkillTypes>

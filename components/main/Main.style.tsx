@@ -18,6 +18,9 @@ export const Intro = styled.div<{ adj?: true }>`
   font-weight: bold;
   font-size: 64px;
   display: block;
+  @media screen and (max-width: 768px) {
+    font-size: 48px;
+  }
 `;
 
 export const StyledSlider = styled(Slider)`

@@ -17,7 +17,7 @@ function Deployment({
   return (
     <S.SkillTypes>
       <SkillTypesTitle>Deployment</SkillTypesTitle>
-      <S.SmallIconsWrapper>
+      <S.IconWrapper>
         <SkillIcon name="S3" filename="s3" level={s3_level} comments={s3} />
         <SkillIcon
           name="Route 53"
@@ -25,7 +25,7 @@ function Deployment({
           level={route53_level}
           comments={route53}
         />
-      </S.SmallIconsWrapper>
+      </S.IconWrapper>
     </S.SkillTypes>
   );
 }

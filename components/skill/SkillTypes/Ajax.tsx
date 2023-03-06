@@ -19,6 +19,7 @@ function Ajax({ data, levels }: { data: DocumentData; levels: DocumentData }) {
           level={axios_level}
           comments={axios}
           height={40}
+          isFull
         />
       </S.IconWrapper>
     </S.SkillTypes>
