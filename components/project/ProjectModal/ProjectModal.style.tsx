@@ -12,6 +12,9 @@ export const StyledBox = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: 800px;
+  @media screen and (max-width: 800px) {
+    width: 500px;
+  }
   /* height: 400px;   */
   background-color: white;
   box-shadow: rgb(0 0 0 / 20%) 0px 11px 15px -7px,
@@ -69,9 +72,15 @@ export const ItemsContainer = styled.div`
   gap: 40px;
   width: 100%;
   margin-top: 20px;
+  @media screen and (max-width: 800px) {
+    flex-wrap: wrap;
+  }
 `;
 export const SliderContainer = styled.div`
   width: 360px;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const Stacks = styled.div`
@@ -92,7 +101,9 @@ export const Item = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* width: 100%; */
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const Intro = styled.h3`
@@ -118,6 +129,9 @@ export const Content = styled.div`
   width: 340px;
   max-height: 240px;
   overflow-y: scroll;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const Detail = styled.button`
