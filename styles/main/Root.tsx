@@ -8,6 +8,9 @@ export const Root = styled.div`
   padding-top: 70px;
   section {
     padding: 60px 100px;
+    @media screen and (max-width: 960px) {
+      padding: 60px 50px;
+    }
     &:nth-child(2n-1) {
       background-color: ${({ theme }) => theme.color.black};
     }

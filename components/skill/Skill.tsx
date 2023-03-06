@@ -15,6 +15,7 @@ import { fireStore } from "../../utils/Firebase";
 import { collection, DocumentData, getDocs } from "firebase/firestore";
 import { useRecoilState } from "recoil";
 import { LoadingState } from "../../utils/atom/loading";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export interface SkillComments {
   [key: string]: DocumentData;
@@ -42,6 +43,7 @@ function Skill() {
     state_level: [],
     deployment_level: [],
   });
+  const matches = useMediaQuery("(min-width:860px)");
 
   const { languages, ajax, tools, fw, designs, state, deployment } =
     skillComments;
@@ -84,21 +86,39 @@ function Skill() {
       <SectionTitle>SKILLS</SectionTitle>
       {!loading && (
         <S.Skills>
-          <S.SkillLine>
-            <Languages data={languages} levels={languages_level} />
-          </S.SkillLine>
-          <S.SkillLine>
-            <Tools data={tools} levels={tools_level} />
-            <Ajax data={ajax} levels={ajax_level} />
-          </S.SkillLine>
-          <S.SkillLine>
-            <Framework data={fw} levels={fw_level} />
-            <Design data={designs} levels={designs_level} />
-          </S.SkillLine>
-          <S.SkillLine>
-            <State data={state} levels={state_level} />
-            <Deployment data={deployment} levels={deployment_level} />
-          </S.SkillLine>
+          {matches ? (
+            <>
+              <S.SkillLine>
+                <Languages data={languages} levels={languages_level} />
+              </S.SkillLine>
+              <S.SkillLine>
+                <Tools data={tools} levels={tools_level} />
+                <Ajax data={ajax} levels={ajax_level} />
+              </S.SkillLine>
+              <S.SkillLine>
+                <Framework data={fw} levels={fw_level} />
+                <Design data={designs} levels={designs_level} />
+              </S.SkillLine>
+              <S.SkillLine>
+                <State data={state} levels={state_level} />
+                <Deployment data={deployment} levels={deployment_level} />
+              </S.SkillLine>
+            </>
+          ) : (
+            <>
+              <S.SkillLine>
+                <Languages data={languages} levels={languages_level} />
+                <Ajax data={ajax} levels={ajax_level} />
+                <Framework data={fw} levels={fw_level} />
+                <Deployment data={deployment} levels={deployment_level} />
+              </S.SkillLine>
+              <S.SkillLine>
+                <Tools data={tools} levels={tools_level} />
+                <Design data={designs} levels={designs_level} />
+                <State data={state} levels={state_level} />
+              </S.SkillLine>
+            </>
+          )}
         </S.Skills>
       )}
     </A.Section>

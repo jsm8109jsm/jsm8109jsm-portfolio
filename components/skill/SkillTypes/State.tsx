@@ -29,7 +29,6 @@ function State({
           name="Recoil"
           filename="recoil"
           level={recoil_level}
-          height={150}
           comments={recoil}
           isFull
         />

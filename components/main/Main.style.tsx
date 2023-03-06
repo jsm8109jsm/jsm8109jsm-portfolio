@@ -18,7 +18,7 @@ export const Intro = styled.div<{ adj?: true }>`
   font-weight: bold;
   font-size: 64px;
   display: block;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 940px) {
     font-size: 48px;
   }
 `;

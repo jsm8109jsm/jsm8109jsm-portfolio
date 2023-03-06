@@ -6,6 +6,9 @@ export const Skills = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  @media screen and (max-width: 860px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const SkillLine = styled.div`
