@@ -57,10 +57,3 @@ export const SkillLevel = styled.div<{ index: number }>`
 export const LevelTitle = styled.span`
   color: ${({ theme }) => theme.color.orange};
 `;
-
-// export const IconTooltip = styled(Tooltip)`
-//   background-color: #f5f5f9;
-//   color: rgba(0, 0, 0, 0.87);
-//   max-width: 220px;
-//   border: 1px solid #dadde9;
-// `;

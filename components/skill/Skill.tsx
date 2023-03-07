@@ -44,6 +44,7 @@ function Skill() {
     deployment_level: [],
   });
   const matches = useMediaQuery("(min-width:860px)");
+  const isMobile = useMediaQuery("(min-width:510px)");
 
   const { languages, ajax, tools, fw, designs, state, deployment } =
     skillComments;
@@ -104,7 +105,7 @@ function Skill() {
                 <Deployment data={deployment} levels={deployment_level} />
               </S.SkillLine>
             </>
-          ) : (
+          ) : isMobile ? (
             <>
               <S.SkillLine>
                 <Languages data={languages} levels={languages_level} />
@@ -113,6 +114,18 @@ function Skill() {
                 <Deployment data={deployment} levels={deployment_level} />
               </S.SkillLine>
               <S.SkillLine>
+                <Tools data={tools} levels={tools_level} />
+                <Design data={designs} levels={designs_level} />
+                <State data={state} levels={state_level} />
+              </S.SkillLine>
+            </>
+          ) : (
+            <>
+              <S.SkillLine>
+                <Languages data={languages} levels={languages_level} />
+                <Ajax data={ajax} levels={ajax_level} />
+                <Framework data={fw} levels={fw_level} />
+                <Deployment data={deployment} levels={deployment_level} />
                 <Tools data={tools} levels={tools_level} />
                 <Design data={designs} levels={designs_level} />
                 <State data={state} levels={state_level} />
