@@ -16,6 +16,8 @@ function Tools({ data, levels }: { data: DocumentData; levels: DocumentData }) {
     notion_level,
     slack_level,
   } = levels;
+
+  const folderName = 'tools';
   return (
     <S.SkillTypes>
       <SkillTypesTitle>Tools</SkillTypesTitle>
@@ -28,6 +30,7 @@ function Tools({ data, levels }: { data: DocumentData; levels: DocumentData }) {
           height={80}
           comments={git}
           isFull
+          folderName={folderName}
         />
         <SkillIcon
           name="GitHub"
@@ -37,37 +40,42 @@ function Tools({ data, levels }: { data: DocumentData; levels: DocumentData }) {
           height={120}
           comments={github}
           isFull
+          folderName={folderName}
         />
         <SkillIcon
           name="Visual Studio Code"
           filename="vsc"
           level={vsc_level}
           comments={vsc}
+          folderName={folderName}
         />
         <SkillIcon
           name="GitKraken"
           filename="gitkraken"
           level={gitkraken_level}
           comments={gitkraken}
+          folderName={folderName}
         />
         <SkillIcon
           name="Figma"
           filename="figma"
           level={figma_level}
           comments={figma}
+          folderName={folderName}
         />
         <SkillIcon
           name="Notion"
           filename="notion"
           level={notion_level}
           comments={notion}
+          folderName={folderName}
         />
         <SkillIcon
           name="slack"
           filename="slack"
           level={slack_level}
           width={150}
-          // height={80}
+          folderName={folderName}
           comments={slack}
           isFull
         />

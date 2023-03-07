@@ -13,6 +13,7 @@ interface SkillIconProps {
   level: number;
   comments: any;
   isFull?: true;
+  folderName: string;
 }
 
 function SkillIcon({
@@ -23,6 +24,7 @@ function SkillIcon({
   level,
   comments,
   isFull,
+  folderName,
 }: SkillIconProps) {
   const [loading, setLoading] = useRecoilState(LoadingState);
   return (
@@ -55,7 +57,7 @@ function SkillIcon({
       >
         <S.Icon
           alt={name}
-          src={`./images/skills/${filename}.svg`}
+          src={`./images/skills/${folderName}/${filename}.svg`}
           width={width}
           height={height}
           isFull={isFull}

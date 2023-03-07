@@ -14,6 +14,7 @@ function Framework({
 }) {
   const { react, next } = data;
   const { react_level, next_level } = levels;
+  const folderName = "framework";
   return (
     <S.SkillTypes>
       <SkillTypesTitle>Front-end F/w, Library</SkillTypesTitle>
@@ -24,6 +25,7 @@ function Framework({
           level={react_level}
           comments={react}
           isFull
+          folderName={folderName}
         />
         <SkillIcon
           name="Next.js"
@@ -31,6 +33,7 @@ function Framework({
           level={next_level}
           comments={next}
           isFull
+          folderName={folderName}
         />
       </S.IconWrapper>
     </S.SkillTypes>

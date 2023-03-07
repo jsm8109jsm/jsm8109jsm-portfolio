@@ -22,81 +22,29 @@ function Languages({
     ts_level,
     python_level,
   } = levels;
+
+  const folderName = "languages";
   return (
     <S.SkillTypes>
       <SkillTypesTitle>Languages</SkillTypesTitle>
-      {/* <S.SmallIconsWrapper>
-        <SkillIcon
-          name="C"
-          filename="c"
-          level={c_level}
-          width={120}
-          height={120}
-          comments={c}
-        />
-        <SkillIcon
-          name="C++"
-          filename="cpp"
-          level={cpp_level}
-          width={120}
-          height={120}
-          comments={cpp}
-        />
-      </S.SmallIconsWrapper>
-      <S.SmallIconsWrapper>
-        <SkillIcon
-          name="HTML5"
-          filename="html"
-          level={html_level}
-          height={130}
-          comments={html}
-        />
-        <SkillIcon
-          name="CSS3"
-          filename="css"
-          level={css_level}
-          height={130}
-          comments={css}
-        />
-      </S.SmallIconsWrapper>
-      <S.SmallIconsWrapper>
-        <SkillIcon
-          name="JavaScript"
-          filename="js"
-          level={js_level}
-          comments={js}
-        />
-        <SkillIcon
-          name="TypeScript"
-          filename="ts"
-          level={ts_level}
-          comments={ts}
-        />
-      </S.SmallIconsWrapper>
-      <S.IconWrapper>
-        <SkillIcon
-          name="python"
-          filename="python"
-          level={python_level}
-          comments={python}
-        />
-      </S.IconWrapper> */}
       <S.IconWrapper>
         <SkillIcon
           name="C"
           filename="c"
           level={c_level}
-          width={120}
-          height={120}
+          width={110}
+          height={110}
           comments={c}
+          folderName={folderName}
         />
         <SkillIcon
           name="C++"
           filename="cpp"
           level={cpp_level}
-          width={120}
-          height={120}
+          width={110}
+          height={110}
           comments={cpp}
+          folderName={folderName}
         />
         <SkillIcon
           name="HTML5"
@@ -104,6 +52,7 @@ function Languages({
           level={html_level}
           height={130}
           comments={html}
+          folderName={folderName}
         />
         <SkillIcon
           name="CSS3"
@@ -111,18 +60,21 @@ function Languages({
           level={css_level}
           height={130}
           comments={css}
+          folderName={folderName}
         />
         <SkillIcon
           name="JavaScript"
           filename="js"
           level={js_level}
           comments={js}
+          folderName={folderName}
         />
         <SkillIcon
           name="TypeScript"
           filename="ts"
           level={ts_level}
           comments={ts}
+          folderName={folderName}
         />
         <SkillIcon
           name="python"
@@ -130,6 +82,7 @@ function Languages({
           level={python_level}
           comments={python}
           isFull
+          folderName={folderName}
         />
       </S.IconWrapper>
     </S.SkillTypes>
