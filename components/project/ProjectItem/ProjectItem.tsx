@@ -9,8 +9,6 @@ import * as S from "./ProjectItem.style";
 function ProjectItem({ data }: { data: Personal_Projects }) {
   const [modal, setModal] = useRecoilState(modalState);
 
-  console.log(modal);
-
   return (
     <S.ProjectItem
       onClick={() =>

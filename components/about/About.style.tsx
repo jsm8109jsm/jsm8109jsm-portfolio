@@ -31,7 +31,7 @@ export const Careers = styled.div`
   display: flex;
   gap: 20px;
   justify-content: center;
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 830px) {
     flex-direction: column;
   }
 `;

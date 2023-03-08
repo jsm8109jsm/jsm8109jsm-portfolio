@@ -16,7 +16,7 @@ function Main() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 2000,
     speed: 500,
     // pauseOnHover: true,
     initialSlide: Math.floor(Math.random() * data.length - 1),
