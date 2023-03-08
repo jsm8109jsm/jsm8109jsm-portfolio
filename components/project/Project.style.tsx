@@ -17,7 +17,7 @@ export const TabContainer = styled.div`
 `;
 
 export const ProjectsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-`
+`;

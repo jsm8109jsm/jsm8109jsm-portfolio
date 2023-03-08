@@ -31,6 +31,9 @@ export const Careers = styled.div`
   display: flex;
   gap: 20px;
   justify-content: center;
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+  }
 `;
 
 export const Stress = styled.span`

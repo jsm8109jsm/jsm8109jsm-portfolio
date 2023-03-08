@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Career = styled.div`
-  width: calc(50% - 10px);
+  /* width: calc(50% - 10px); */
+  width: 100%;
   border-radius: 30px;
   padding: 30px;
   background-color: ${({ theme }) => theme.color.black};
