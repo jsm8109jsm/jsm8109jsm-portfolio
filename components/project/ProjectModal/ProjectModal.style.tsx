@@ -13,7 +13,9 @@ export const StyledBox = styled.div`
   transform: translate(-50%, -50%);
   width: 800px;
   @media screen and (max-width: 800px) {
-    width: 500px;
+    width: 300px;
+    height: 600px;
+    font-size: 10px;
   }
   /* height: 400px;   */
   background-color: white;
@@ -27,7 +29,7 @@ export const StyledBox = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 48px;
+  font-size: 3em;
   text-align: center;
   margin: 0;
   font-weight: 900;
@@ -37,7 +39,7 @@ export const Date = styled.h6`
   color: #808080;
   text-align: center;
   margin: 0;
-  font-size: 24px;
+  font-size: 1.5em;
 `;
 export const StyledSlider = styled(Slider)`
   .slick-list {
@@ -74,6 +76,7 @@ export const ItemsContainer = styled.div`
   margin-top: 20px;
   @media screen and (max-width: 800px) {
     flex-wrap: wrap;
+    gap: 10px;
   }
 `;
 export const SliderContainer = styled.div`
@@ -107,12 +110,12 @@ export const Item = styled.div`
 `;
 
 export const Intro = styled.h3`
-  font-size: 24px;
+  font-size: 1.5em;
   margin: 0;
   margin-bottom: 10px;
   text-align: center;
   @media screen and (max-width: 800px) {
-    margin: 20px auto;
+    margin: 1.25em auto;
   }
 `;
 
@@ -134,6 +137,7 @@ export const Content = styled.div`
   overflow-y: scroll;
   @media screen and (max-width: 800px) {
     width: 100%;
+    height: 200px;
   }
 `;
 
