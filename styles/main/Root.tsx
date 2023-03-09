@@ -14,7 +14,7 @@ export const Root = styled.div`
     &:nth-child(2n) {
       background-color: ${({ theme }) => theme.color.lightBeige};
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 960px) {
       padding: 60px 50px;
     }
   }

@@ -48,12 +48,6 @@ function About() {
         <Strength title={"장점1"}>
           <Lorem />
         </Strength>
-        <Strength title={"장점1"}>
-          <Lorem />
-        </Strength>
-        <Strength title={"장점1"}>
-          <Lorem />
-        </Strength>
       </S.Strengths>
       <S.Careers>
         <Career
