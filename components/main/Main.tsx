@@ -18,7 +18,6 @@ function Main() {
     autoplay: true,
     autoplaySpeed: 2000,
     speed: 500,
-    // pauseOnHover: true,
     initialSlide: Math.floor(Math.random() * data.length - 1),
   };
   const bucket = collection(fireStore, "modifier");

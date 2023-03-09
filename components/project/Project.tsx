@@ -77,26 +77,6 @@ function Project() {
             return <ProjectItem key={index} data={item}></ProjectItem>;
           })}
         </Fade>
-        <Fade cascade damping={0.25} triggerOnce>
-          {projects.map((item, index) => {
-            return <ProjectItem key={index} data={item}></ProjectItem>;
-          })}
-        </Fade>
-        <Fade cascade damping={0.25} triggerOnce>
-          {projects.map((item, index) => {
-            return <ProjectItem key={index} data={item}></ProjectItem>;
-          })}
-        </Fade>
-        <Fade cascade damping={0.25} triggerOnce>
-          {projects.map((item, index) => {
-            return <ProjectItem key={index} data={item}></ProjectItem>;
-          })}
-        </Fade>
-        <Fade cascade damping={0.25} triggerOnce>
-          {projects.map((item, index) => {
-            return <ProjectItem key={index} data={item}></ProjectItem>;
-          })}
-        </Fade>
       </S.ProjectsContainer>
     </A.Section>
   );

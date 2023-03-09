@@ -10,8 +10,8 @@ export const ProjectItem = styled.div`
   flex-direction: column;
   gap: 25px;
   cursor: pointer;
-  width: 400px;
-  height: 400px;
+  max-width: 400px;
+  max-height: 400px;
 `;
 
 export const ProjectImage = styled(Image)`
