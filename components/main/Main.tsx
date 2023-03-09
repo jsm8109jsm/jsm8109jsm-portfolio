@@ -9,6 +9,7 @@ import { fireStore } from "../../utils/Firebase";
 
 function Main() {
   const [data, setData] = useState<string[]>([]);
+  const startIndex = Math.floor(Math.random() * data.length - 1);
   const settings = {
     arrows: false,
     dots: false,
@@ -18,7 +19,7 @@ function Main() {
     autoplay: true,
     autoplaySpeed: 2000,
     speed: 500,
-    initialSlide: Math.floor(Math.random() * data.length - 1),
+    initialSlide: startIndex,
   };
   const bucket = collection(fireStore, "modifier");
 
@@ -40,16 +41,18 @@ function Main() {
     <S.Main id="main">
       <S.IntroDiv>
         <Fade cascade damping={0.5} triggerOnce>
-          <S.Intro>안녕하세요!👋</S.Intro>
-          <S.StyledSlider {...settings}>
-            {data.map((item) => {
-              return (
-                <S.Intro adj key={item}>
-                  {`/** ${item} */`}
-                </S.Intro>
-              );
-            })}
-          </S.StyledSlider>
+          {data.length > 0 && <S.Intro>안녕하세요!👋</S.Intro>}
+          {data.length > 0 && (
+            <S.StyledSlider {...settings}>
+              {data.map((item) => {
+                return (
+                  <S.Intro adj key={item}>
+                    {`/** ${item} */`}
+                  </S.Intro>
+                );
+              })}
+            </S.StyledSlider>
+          )}
           <S.Intro>프론트엔드 개발자</S.Intro>
           <S.Intro>정승민입니다!</S.Intro>
         </Fade>
