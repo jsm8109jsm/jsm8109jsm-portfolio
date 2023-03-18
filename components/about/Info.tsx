@@ -14,5 +14,13 @@ export function Character1() {
 }
 
 export function Character2() {
-  return <div>Info</div>;
+  return (
+    <>
+      저는 <S.Stress>학구열</S.Stress>이 넘칩니다. 프론트엔드{" "}
+      <S.Stress>신기술</S.Stress>에 대해 관심이 많고, 배우고자 합니다.
+      프로젝트를 진행할 때마다, 신기술을 적용시키려고 노력합니다. 모르는 부분이
+      있을때는 <S.Stress>공식 문서</S.Stress>를 찾아보거나{" "}
+      <S.Stress>구글링</S.Stress>을 하며 학습합니다.
+    </>
+  );
 }

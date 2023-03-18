@@ -83,6 +83,7 @@ function ProjectModal() {
                       alt={String(data.name)}
                       width={360}
                       height={225.3}
+                      priority
                       key={index}
                     />
                   );

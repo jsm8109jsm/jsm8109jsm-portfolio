@@ -4,12 +4,11 @@ import SectionTitle from "../etc/SectionTitle";
 import * as S from "./About.style";
 import { Badge, Phone, SchoolOutlined, Email } from "@mui/icons-material";
 import Strength from "./Strength/Strength";
-import Lorem from "../etc/Lorem";
 import Career from "./Career/Career";
 import * as A from "../../styles/All";
 
 import data from "./Career/career.json";
-import { Character1 } from "./Info";
+import { Character1, Character2 } from "./Info";
 
 function About() {
   return (
@@ -45,8 +44,8 @@ function About() {
         <Strength title={"유쾌!"}>
           <Character1 />
         </Strength>
-        <Strength title={"장점1"}>
-          <Lorem />
+        <Strength title={"학구열"}>
+          <Character2 />
         </Strength>
       </S.Strengths>
       <S.Careers>
