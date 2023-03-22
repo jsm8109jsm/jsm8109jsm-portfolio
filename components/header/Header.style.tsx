@@ -46,8 +46,8 @@ export const LinkMenu = styled(Menu)<{ isScroll: boolean }>`
   color: ${({ isScroll, theme }) =>
     isScroll ? theme.color.beige : theme.color.teal};
   right: 30px;
-  width: 40px;
-  height: 40px;
+  width: 40px !important;
+  height: 40px !important;
   cursor: pointer;
 `;
 
@@ -68,10 +68,10 @@ export const MobileLinkItem = styled(LinkItem)`
 `;
 
 export const StyledList = styled(List)<{ isOpen: boolean }>`
-  position: fixed;
+  position: fixed !important;
   top: 70px;
   z-index: 30;
-  padding: 0;
+  padding: 0 !important;
   right: 0;
 
   animation: ${({ isOpen }) => (isOpen ? "fadeIn" : "fadeOut")} 0.5s ease;
