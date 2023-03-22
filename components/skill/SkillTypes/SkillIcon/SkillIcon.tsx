@@ -53,7 +53,7 @@ function SkillIcon({
           </>
         }
         arrow
-        placement="right"
+        placement="bottom"
       >
         <S.Icon
           alt={name}

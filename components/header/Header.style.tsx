@@ -48,6 +48,7 @@ export const LinkMenu = styled(Menu)<{ isScroll: boolean }>`
   right: 30px;
   width: 40px;
   height: 40px;
+  cursor: pointer;
 `;
 
 export const LinkItem = styled.li<{ isScroll: boolean }>`
@@ -67,9 +68,9 @@ export const MobileLinkItem = styled(LinkItem)`
 `;
 
 export const StyledList = styled(List)<{ isOpen: boolean }>`
-  position: absolute;
+  position: fixed;
   top: 70px;
-  z-index: 0;
+  z-index: 30;
   padding: 0;
   right: 0;
 

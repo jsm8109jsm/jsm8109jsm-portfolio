@@ -13,6 +13,13 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isView, setIsView] = useState(false);
 
+  useEffect(() => {
+    if (isMobile) {
+      setIsView(false);
+      setIsOpen(false);
+    }
+  }, [isMobile]);
+
   const toggleMenu = () => {
     if (!isOpen) {
       setIsView(true);
