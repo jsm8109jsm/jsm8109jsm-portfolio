@@ -6,9 +6,14 @@ import { Personal_Projects } from "../Project";
 import { Skeleton } from "@mui/material";
 import * as S from "./ProjectItem.style";
 
-function ProjectItem({ data }: { data: Personal_Projects }) {
+function ProjectItem({
+  data,
+  value,
+}: {
+  data: Personal_Projects;
+  value: number;
+}) {
   const [modal, setModal] = useRecoilState(modalState);
-
   return (
     <S.ProjectItem
       onClick={() =>
@@ -17,6 +22,7 @@ function ProjectItem({ data }: { data: Personal_Projects }) {
             ...prev,
             isOpen: true,
             data: data,
+            value,
           };
         })
       }

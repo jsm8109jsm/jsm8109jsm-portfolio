@@ -74,7 +74,7 @@ function Project() {
       <S.ProjectsContainer>
         <Fade cascade damping={0.25} triggerOnce>
           {projects.map((item, index) => {
-            return <ProjectItem key={index} data={item}></ProjectItem>;
+            return <ProjectItem key={index} data={item} value={value}></ProjectItem>;
           })}
         </Fade>
       </S.ProjectsContainer>

@@ -60,7 +60,7 @@ export const ProjectImg = styled(Image)`
 
 export const ImageSkeleton = styled(Skeleton)`
   width: 360px;
-  height: 225.3px;
+  height: 225.3px !important;
 `;
 
 export const Index = styled.span`

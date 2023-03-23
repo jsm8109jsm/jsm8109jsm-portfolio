@@ -32,6 +32,8 @@ function ProjectModal() {
     prevArrow: <ChevronLeft />,
     nextArrow: <ChevronRight />,
   };
+
+  // console.log(imageList);
   useEffect(() => {
     (async () => {
       try {
