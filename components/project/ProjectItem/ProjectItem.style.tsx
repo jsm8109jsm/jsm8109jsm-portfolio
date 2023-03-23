@@ -11,12 +11,12 @@ export const ProjectItem = styled.div`
   gap: 25px;
   cursor: pointer;
   max-width: 400px;
-  max-height: 400px;
+  /* max-height: 400px; */
 `;
 
 export const ProjectImage = styled(Image)`
-  height: auto !important;
-  position: relative !important;
+  /* height: auto !important; */
+  /* position: relative !important; */
 `;    
 
 export const Title = styled.h1`

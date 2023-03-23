@@ -62,19 +62,19 @@ function Header() {
       </S.Header>
       {isOpen ? (
         <S.StyledList isOpen={isView}>
-          <Divider light />
+          {/* <Divider light /> */}
           <S.StyledListItem isScroll={isScroll}>
             <Link to="about" spy smooth offset={-70} duration={500}>
               <S.MobileLinkItem isScroll={isScroll}>ABOUT ME</S.MobileLinkItem>
             </Link>
           </S.StyledListItem>
-          <Divider light />
+          {/* <Divider light /> */}
           <S.StyledListItem isScroll={isScroll}>
             <Link to="skill" spy smooth offset={-70} duration={500}>
               <S.MobileLinkItem isScroll={isScroll}>SKILLS</S.MobileLinkItem>
             </Link>
           </S.StyledListItem>
-          <Divider light />
+          {/* <Divider light /> */}
           <S.StyledListItem isScroll={isScroll}>
             <Link to="project" spy smooth offset={-70} duration={500}>
               <S.MobileLinkItem isScroll={isScroll}>PROJECTS</S.MobileLinkItem>

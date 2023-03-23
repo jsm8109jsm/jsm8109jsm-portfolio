@@ -22,13 +22,19 @@ function ProjectItem({ data }: { data: Personal_Projects }) {
       }
     >
       {data.url ? (
-        <S.ProjectImage src={String(data.url)} alt={`${data.name} 사진`} fill />
+        <S.ProjectImage
+          src={String(data.url)}
+          alt={`${data.name} 사진`}
+          width={360}
+          height={234.12}
+        />
       ) : (
         <Skeleton>
           <S.ProjectImage
             src={String(data.url)}
             alt={`${data.name} 사진`}
-            fill
+            width={360}
+            height={234.12}
           />
         </Skeleton>
       )}
