@@ -76,12 +76,6 @@ function Project() {
           {projects.map((item, index) => {
             return <ProjectItem key={index} data={item} value={value}></ProjectItem>;
           })}
-          {projects.map((item, index) => {
-            return <ProjectItem key={index} data={item} value={value}></ProjectItem>;
-          })}
-          {projects.map((item, index) => {
-            return <ProjectItem key={index} data={item} value={value}></ProjectItem>;
-          })}
         </Fade>
       </S.ProjectsContainer>
     </A.Section>
