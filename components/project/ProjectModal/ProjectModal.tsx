@@ -5,7 +5,7 @@ import { modalState } from "../../../utils/atom/modal";
 import { storage } from "../../../utils/Firebase";
 import * as S from "./ProjectModal.style";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
-import { Layers, Mood, MoodBad } from "@mui/icons-material";
+import { Layers, Mood, MoodBad, PeopleAlt } from "@mui/icons-material";
 import { VscGithub } from "react-icons/vsc";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
@@ -119,6 +119,15 @@ function ProjectModal() {
                     })}
                 </S.Stacks>
               </div>
+              {value === 1 && (
+                <div>
+                  <S.ItemTitle>
+                    <PeopleAlt />
+                    맡은 역할
+                  </S.ItemTitle>
+                  <>{data.role}</>
+                </div>
+              )}
               <div>
                 <S.ItemTitle>
                   <Mood />

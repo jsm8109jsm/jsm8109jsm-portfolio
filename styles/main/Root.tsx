@@ -15,7 +15,7 @@ export const Root = styled.div`
       background-color: ${({ theme }) => theme.color.lightBeige};
     }
     @media screen and (max-width: 960px) {
-      padding: 60px 50px;
+      padding: 60px 30px;
     }
   }
 `;

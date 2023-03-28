@@ -4,6 +4,7 @@ export const Info = styled.div`
   display: flex;
   gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export const InfoItems = styled.div`

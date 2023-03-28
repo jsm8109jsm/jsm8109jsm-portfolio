@@ -13,8 +13,8 @@ export const StyledBox = styled.div`
   transform: translate(-50%, -50%);
   width: 800px;
   @media screen and (max-width: 800px) {
-    width: 300px;
-    height: 600px;
+    width: 400px;
+    /* height: 700px; */
     font-size: 10px;
   }
   /* height: 400px;   */
@@ -61,6 +61,10 @@ export const ProjectImg = styled(Image)`
 export const ImageSkeleton = styled(Skeleton)`
   width: 360px;
   height: 225.3px !important;
+  @media screen and (max-width: 800px) {
+    width: 340px;
+    height: 221.23px !important;
+  }
 `;
 
 export const Index = styled.span`

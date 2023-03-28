@@ -5,6 +5,7 @@ import { modalState } from "../../../utils/atom/modal";
 import { Personal_Projects } from "../Project";
 import { Skeleton } from "@mui/material";
 import * as S from "./ProjectItem.style";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 function ProjectItem({
   data,
@@ -14,6 +15,7 @@ function ProjectItem({
   value: number;
 }) {
   const [modal, setModal] = useRecoilState(modalState);
+  const matches = useMediaQuery("(max-width: 800px");
   return (
     <S.ProjectItem
       onClick={() =>
@@ -27,23 +29,25 @@ function ProjectItem({
         })
       }
     >
-      {data.url ? (
-        <S.ProjectImage
-          src={String(data.url)}
-          alt={`${data.name} 사진`}
-          width={360}
-          height={234.12}
-        />
-      ) : (
-        <Skeleton>
+      <S.ImageWrapper>
+        {data.url ? (
           <S.ProjectImage
             src={String(data.url)}
             alt={`${data.name} 사진`}
-            width={360}
+            width={matches ? 260 : 360}
             height={234.12}
           />
-        </Skeleton>
-      )}
+        ) : (
+          <Skeleton>
+            <S.ProjectImage
+              src={String(data.url)}
+              alt={`${data.name} 사진`}
+              width={matches ? 260 : 360}
+              height={234.12}
+            />
+          </Skeleton>
+        )}
+      </S.ImageWrapper>
       <div>
         <S.Title>
           <>{data.name}</>
