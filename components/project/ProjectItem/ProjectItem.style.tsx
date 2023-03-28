@@ -10,10 +10,10 @@ export const ProjectItem = styled.div`
   flex-direction: column;
   gap: 25px;
   cursor: pointer;
-  max-width: 400px;
+  width: 400px;
 
   @media screen and (max-width: 800px) {
-    max-width: 300px;
+    width: 300px;
   }
   /* max-height: 400px; */
 `;

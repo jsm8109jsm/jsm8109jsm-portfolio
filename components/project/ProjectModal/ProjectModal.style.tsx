@@ -13,8 +13,8 @@ export const StyledBox = styled.div`
   transform: translate(-50%, -50%);
   width: 800px;
   @media screen and (max-width: 800px) {
-    width: 400px;
-    /* height: 700px; */
+    width: 330px;
+    padding: 20px;
     font-size: 10px;
   }
   /* height: 400px;   */
