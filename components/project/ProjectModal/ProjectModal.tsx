@@ -4,11 +4,7 @@ import { useRecoilState } from "recoil";
 import { modalState } from "../../../utils/atom/modal";
 import { storage } from "../../../utils/Firebase";
 import * as S from "./ProjectModal.style";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Handshake,
-} from "@mui/icons-material";
+import { ChevronLeft, ChevronRight, Handshake } from "@mui/icons-material";
 import { Layers, Mood, MoodBad, PeopleAlt } from "@mui/icons-material";
 import { VscGithub } from "react-icons/vsc";
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -64,7 +60,10 @@ function ProjectModal() {
   return (
     <S.StyledModal
       open={isOpen}
-      onClose={() => setModal((prev) => ({ ...prev, isOpen: false }))}
+      onClose={() => {
+        setModal((prev) => ({ ...prev, isOpen: false }));
+        setImageIndex(1);
+      }}
     >
       <S.StyledBox>
         <S.Title>
