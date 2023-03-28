@@ -3,6 +3,7 @@ import { Modal } from "@mui/material";
 import Slider from "react-slick";
 import Image from "next/image";
 import { Skeleton } from "@mui/material";
+import { Circle } from "@mui/icons-material";
 
 export const StyledModal = styled(Modal)``;
 
@@ -103,6 +104,18 @@ export const Stack = styled.div`
   padding: 5px;
   border: 1px solid black;
 `;
+
+export const Part = styled.div`
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+`;
+
+export const Dot = styled(Circle)`
+  width: 8px;
+  height: 8px;
+`
 
 export const Item = styled.div`
   display: flex;
