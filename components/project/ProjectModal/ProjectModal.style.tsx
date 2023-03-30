@@ -113,8 +113,8 @@ export const Part = styled.div`
 `;
 
 export const Dot = styled(Circle)`
-  width: 8px;
-  height: 8px;
+  width: 4px;
+  height: 4px;
 `
 
 export const Item = styled.div`
@@ -172,7 +172,6 @@ export const Detail = styled.button`
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 127.02px;
 `;
 
 export const Link = styled.a`
