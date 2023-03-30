@@ -113,9 +113,9 @@ export const Part = styled.div`
 `;
 
 export const Dot = styled(Circle)`
-  width: 4px;
-  height: 4px;
-`
+  width: 4px !important;
+  height: 4px !important;
+`;
 
 export const Item = styled.div`
   display: flex;
