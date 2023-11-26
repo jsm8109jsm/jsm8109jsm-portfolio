@@ -26,6 +26,10 @@ export const Strengths = styled.div`
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   gap: 60px;
+  @media screen and (max-width: 830px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const Careers = styled.div`
